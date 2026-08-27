@@ -1,0 +1,27 @@
+{
+  "expo": {
+    "name": "LIME",
+    "slug": "lime-caribbean",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "scheme": "lime",
+    "userInterfaceStyle": "light",
+    "splash": { "backgroundColor": "#093F3A" },
+    "platforms": ["ios", "android", "web"],
+    "ios": {
+      "bundleIdentifier": "com.yourcompany.lime",
+      "supportsTablet": false,
+      "infoPlist": {
+        "NSPhotoLibraryUsageDescription": "LIME needs photo access so you can share pictures with the community."
+      }
+    },
+    "android": {
+      "package": "com.yourcompany.lime",
+      "permissions": ["READ_MEDIA_IMAGES"]
+    },
+    "web": {
+      "bundler": "metro"
+    },
+    "plugins": ["expo-asset"]
+  }
+}

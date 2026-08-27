@@ -1,0 +1,432 @@
+{"_e":"root:init","_t":1785738983409,"format":"v0-jsonl","version":"57.0.11"}
+{"_e":"env:mode","_t":1785738983410,"nodeEnv":"development","babelEnv":"development","mode":"development"}
+{"_e":"env:load","_t":1785738983411,"mode":"development","files":[],"env":{}}
+{"_e":"devserver:start","_t":1785738983689,"mode":"development","web":true,"baseUrl":"","asyncRoutes":false,"routerRoot":"../../../app","serverComponents":false,"serverActions":false,"serverRendering":false,"apiRoutes":false,"exporting":false}
+{"_e":"metro:config","_t":1785738983958,"serverRoot":"../../..","projectRoot":"../../..","exporting":false,"flags":{"autolinkingModuleResolution":false,"serverActions":false,"serverComponents":false,"reactCompiler":false,"optimizeGraph":false,"treeshaking":false,"logbox":false}}
+{"_e":"expo:dev-tools-plugin:load","_t":1785738984107,"plugins":[]}
+{"_e":"metro:instantiate","_t":1785738984667,"atlas":false,"workers":6,"host":"::","port":8081}
+{"_e":"metro:client_log","_t":1785739060545,"level":"error","data":["Project is incompatible with this version of Expo Go\n\nThe project you requested requires a newer version of Expo Go.\n\nHow to fix this error:\n\nDownload the latest version of Expo Go from the App Store."]}
+{"_e":"root:init","_t":1785739701220,"format":"v0-jsonl","version":"57.0.11"}
+{"_e":"env:mode","_t":1785739701221,"nodeEnv":"development","babelEnv":"development","mode":"development"}
+{"_e":"env:load","_t":1785739701223,"mode":"development","files":[],"env":{}}
+{"_e":"devserver:start","_t":1785739701530,"mode":"development","web":true,"baseUrl":"","asyncRoutes":false,"routerRoot":"../../../app","serverComponents":false,"serverActions":false,"serverRendering":false,"apiRoutes":false,"exporting":false}
+{"_e":"metro:config","_t":1785739701808,"serverRoot":"../../..","projectRoot":"../../..","exporting":false,"flags":{"autolinkingModuleResolution":false,"serverActions":false,"serverComponents":false,"reactCompiler":false,"optimizeGraph":false,"treeshaking":false,"logbox":false}}
+{"_e":"expo:dev-tools-plugin:load","_t":1785739701963,"plugins":[]}
+{"_e":"metro:instantiate","_t":1785739702529,"atlas":false,"workers":6,"host":"::","port":8081}
+{"_e":"metro:client_log","_t":1785739788673,"level":"error","data":["Project is incompatible with this version of Expo Go\n\nThe project you requested requires a newer version of Expo Go.\n\nHow to fix this error:\n\nDownload the latest version of Expo Go from the App Store."]}
+{"_e":"metro:client_log","_t":1785739834511,"level":"error","data":["Project is incompatible with this version of Expo Go\n\nThe project you requested requires a newer version of Expo Go.\n\nHow to fix this error:\n\nDownload the latest version of Expo Go from the App Store."]}
+{"_e":"root:init","_t":1785739931065,"format":"v0-jsonl","version":"57.0.11"}
+{"_e":"env:mode","_t":1785739931066,"nodeEnv":"development","babelEnv":"development","mode":"development"}
+{"_e":"env:load","_t":1785739931067,"mode":"development","files":[],"env":{}}
+{"_e":"devserver:start","_t":1785739931372,"mode":"development","web":true,"baseUrl":"","asyncRoutes":false,"routerRoot":"../../../app","serverComponents":false,"serverActions":false,"serverRendering":false,"apiRoutes":false,"exporting":false}
+{"_e":"metro:config","_t":1785739931650,"serverRoot":"../../..","projectRoot":"../../..","exporting":false,"flags":{"autolinkingModuleResolution":false,"serverActions":false,"serverComponents":false,"reactCompiler":false,"optimizeGraph":false,"treeshaking":false,"logbox":false}}
+{"_e":"expo:dev-tools-plugin:load","_t":1785739931800,"plugins":[]}
+{"_e":"metro:instantiate","_t":1785739932105,"atlas":false,"workers":6,"host":"::","port":8081}
+{"_e":"metro:client_log","_t":1785739944357,"level":"error","data":["Project is incompatible with this version of Expo Go\n\nThe project you requested requires a newer version of Expo Go.\n\nHow to fix this error:\n\nDownload the latest version of Expo Go from the App Store."]}
+{"_e":"root:init","_t":1787191382044,"format":"v0-jsonl","version":"57.0.11"}
+{"_e":"env:mode","_t":1787191382044,"nodeEnv":"development","babelEnv":"development","mode":"development"}
+{"_e":"env:load","_t":1787191382046,"mode":"development","files":[],"env":{}}
+{"_e":"devserver:start","_t":1787191382362,"mode":"development","web":true,"baseUrl":"","asyncRoutes":false,"routerRoot":"../../../app","serverComponents":false,"serverActions":false,"serverRendering":false,"apiRoutes":false,"exporting":false}
+{"_e":"metro:config","_t":1787191382673,"serverRoot":"../../..","projectRoot":"../../..","exporting":false,"flags":{"autolinkingModuleResolution":false,"serverActions":false,"serverComponents":false,"reactCompiler":false,"optimizeGraph":false,"treeshaking":false,"logbox":false}}
+{"_e":"expo:dev-tools-plugin:load","_t":1787191382832,"plugins":[]}
+{"_e":"metro:instantiate","_t":1787191383408,"atlas":false,"workers":6,"host":"::","port":8081}
+{"_e":"root:init","_t":1787192637730,"format":"v0-jsonl","version":"57.0.11"}
+{"_e":"env:mode","_t":1787192637731,"nodeEnv":"development","babelEnv":"development","mode":"development"}
+{"_e":"env:load","_t":1787192637733,"mode":"development","files":[],"env":{}}
+{"_e":"devserver:start","_t":1787192638060,"mode":"development","web":true,"baseUrl":"","asyncRoutes":false,"routerRoot":"../../../app","serverComponents":false,"serverActions":false,"serverRendering":false,"apiRoutes":false,"exporting":false}
+{"_e":"metro:config","_t":1787192638337,"serverRoot":"../../..","projectRoot":"../../..","exporting":false,"flags":{"autolinkingModuleResolution":false,"serverActions":false,"serverComponents":false,"reactCompiler":false,"optimizeGraph":false,"treeshaking":false,"logbox":false}}
+{"_e":"expo:dev-tools-plugin:load","_t":1787192638487,"plugins":[]}
+{"_e":"metro:instantiate","_t":1787192639064,"atlas":false,"workers":6,"host":"::","port":8081}
+{"_e":"metro:bundling:started","_t":1787192651825,"id":"1","platform":"web","environment":null,"entry":"index.ts"}
+{"_e":"metro:bundling:progress","_t":1787192651826,"id":"1","progress":0,"total":1,"current":0}
+{"_e":"metro:bundling:progress","_t":1787192651829,"id":"1","progress":0,"total":1,"current":0}
+{"_e":"metro:bundling:progress","_t":1787192652220,"id":"1","progress":0.010000000000000002,"total":1,"current":1}
+{"_e":"metro:bundling:progress","_t":1787192652320,"id":"1","progress":0.04674945215485757,"total":37,"current":8}
+{"_e":"metro:bundling:progress","_t":1787192652425,"id":"1","progress":0.1338488994646044,"total":41,"current":15}
+{"_e":"metro:bundling:progress","_t":1787192652530,"id":"1","progress":0.32653061224489793,"total":42,"current":24}
+{"_e":"metro:bundling:progress","_t":1787192652633,"id":"1","progress":0.6173469387755102,"total":42,"current":33}
+{"_e":"metro:bundling:progress","_t":1787192652733,"id":"1","progress":0.7561436672967864,"total":46,"current":40}
+{"_e":"metro:bundling:progress","_t":1787192652835,"id":"1","progress":0.7561436672967864,"total":61,"current":52}
+{"_e":"metro:bundling:progress","_t":1787192652937,"id":"1","progress":0.8948137326515705,"total":74,"current":70}
+{"_e":"metro:bundling:progress","_t":1787192653044,"id":"1","progress":0.8948137326515705,"total":94,"current":86}
+{"_e":"metro:bundling:failed","_t":1787192653086,"id":"1","message":"Unable to resolve \"react-native-web/dist/exports/Platform\" from \"node_modules/expo/node_modules/expo-modules-core/src/Platform.ts\"\n> 1 | import type { PlatformOSType } from 'react-native';\n  2 | import { Platform as ReactNativePlatform } from 'react-native';\n  3 |\n  4 | import {","importStack":"\u001b[1mImport stack:\u001b[22m\n\u001b[90m\u001b[39m\n\u001b[90m\u001b[90m \u001b[39m\u001b[90mnode_modules/\u001b[1mexpo\u001b[22m/node_modules/expo-modules-core/src/Platform.ts\u001b[39m\n\u001b[90m\u001b[90m |\u001b[39m\u001b[90m \u001b[36mimport\u001b[39m\u001b[90m \u001b[32m\"react-native-web/dist/exports/Platform\"\u001b[39m\u001b[90m\u001b[39m\n\u001b[90m\u001b[39m\n\u001b[90m\u001b[90m \u001b[39m\u001b[90mnode_modules/\u001b[1mexpo\u001b[22m/node_modules/expo-modules-core/src/index.ts\u001b[39m\n\u001b[90m\u001b[90m |\u001b[39m\u001b[90m \u001b[36mimport\u001b[39m\u001b[90m \u001b[32m\"./Platform\"\u001b[39m\u001b[90m\u001b[39m\n\u001b[90m\u001b[39m\n\u001b[90m\u001b[90m \u001b[39m\u001b[90mnode_modules/\u001b[1mexpo\u001b[22m/src/Expo.ts\u001b[39m\n\u001b[90m\u001b[90m |\u001b[39m\u001b[90m \u001b[36mimport\u001b[39m\u001b[90m \u001b[32m\"expo-modules-core\"\u001b[39m\u001b[90m\u001b[39m\n\n\u001b[90m \u001b[39mindex.ts\n\u001b[90m |\u001b[39m \u001b[36mimport\u001b[39m \u001b[32m\"expo\"\u001b[39m\n\n\u001b[90m \u001b[39m\n\u001b[90m |\u001b[39m \u001b[36mimport\u001b[39m \u001b[32m\"./index.ts\"\u001b[39m\n","filename":null,"targetModuleName":"react-native-web/dist/exports/Platform","originModulePath":"node_modules/expo/node_modules/expo-modules-core/src/Platform.ts"}
+{"_e":"root:init","_t":1787193402591,"format":"v0-jsonl","version":"57.0.11"}
+{"_e":"env:mode","_t":1787193402592,"nodeEnv":"development","babelEnv":"development","mode":"development"}
+{"_e":"env:load","_t":1787193402594,"mode":"development","files":[],"env":{}}
+{"_e":"devserver:start","_t":1787193402928,"mode":"development","web":true,"baseUrl":"","asyncRoutes":false,"routerRoot":"../../../app","serverComponents":false,"serverActions":false,"serverRendering":false,"apiRoutes":false,"exporting":false}
+{"_e":"metro:config","_t":1787193403220,"serverRoot":"../../..","projectRoot":"../../..","exporting":false,"flags":{"autolinkingModuleResolution":false,"serverActions":false,"serverComponents":false,"reactCompiler":false,"optimizeGraph":false,"treeshaking":false,"logbox":false}}
+{"_e":"expo:dev-tools-plugin:load","_t":1787193403391,"plugins":[]}
+{"_e":"metro:instantiate","_t":1787193403966,"atlas":false,"workers":6,"host":"::","port":8081}
+{"_e":"metro:bundling:started","_t":1787193419297,"id":"1","platform":"web","environment":null,"entry":"index.ts"}
+{"_e":"metro:bundling:progress","_t":1787193419298,"id":"1","progress":0,"total":1,"current":0}
+{"_e":"metro:bundling:progress","_t":1787193419301,"id":"1","progress":0,"total":1,"current":0}
+{"_e":"metro:bundling:progress","_t":1787193419693,"id":"1","progress":0.010000000000000002,"total":1,"current":1}
+{"_e":"metro:bundling:progress","_t":1787193419795,"id":"1","progress":0.25,"total":12,"current":6}
+{"_e":"metro:bundling:progress","_t":1787193419983,"id":"1","progress":0.34027777777777785,"total":12,"current":7}
+{"_e":"metro:bundling:progress","_t":1787193420171,"id":"1","progress":0.4444444444444444,"total":12,"current":8}
+{"_e":"metro:bundling:progress","_t":1787193420271,"id":"1","progress":0.4444444444444444,"total":65,"current":34}
+{"_e":"metro:bundling:progress","_t":1787193420372,"id":"1","progress":0.7628585162634193,"total":79,"current":69}
+{"_e":"metro:bundling:progress","_t":1787193420472,"id":"1","progress":0.8336483931947068,"total":92,"current":84}
+{"_e":"metro:bundling:failed","_t":1787193420549,"id":"1","message":"Unable to resolve \"react-native-web/dist/exports/Text\" from \"src/App.tsx\"\n> 1 | import React, { useEffect, useState } from 'react';\n  2 | import { NavigationContainer } from '@react-navigation/native';\n  3 | import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';\n  4 | import { createNativeStackNavigator } from '@react-navigation/native-stack';","importStack":"\u001b[1mImport stack:\u001b[22m\n\n\u001b[90m \u001b[39msrc/App.tsx\n\u001b[90m |\u001b[39m \u001b[36mimport\u001b[39m \u001b[32m\"react-native-web/dist/exports/Text\"\u001b[39m\n\n\u001b[90m \u001b[39mindex.ts\n\u001b[90m |\u001b[39m \u001b[36mimport\u001b[39m \u001b[32m\"./src/App\"\u001b[39m\n\n\u001b[90m \u001b[39m\n\u001b[90m |\u001b[39m \u001b[36mimport\u001b[39m \u001b[32m\"./index.ts\"\u001b[39m\n","filename":null,"targetModuleName":"react-native-web/dist/exports/Text","originModulePath":"src/App.tsx"}
+{"_e":"root:init","_t":1787193943609,"format":"v0-jsonl","version":"57.0.16"}
+{"_e":"env:mode","_t":1787193943610,"nodeEnv":"development","babelEnv":"development","mode":"development"}
+{"_e":"env:load","_t":1787193943611,"mode":"development","files":[],"env":{}}
+{"_e":"devserver:start","_t":1787193943869,"mode":"development","web":true,"baseUrl":"","asyncRoutes":false,"routerRoot":"../../../app","serverComponents":false,"serverActions":false,"serverRendering":false,"apiRoutes":false,"exporting":false}
+{"_e":"metro:config","_t":1787193944121,"serverRoot":"../../..","projectRoot":"../../..","exporting":false,"flags":{"autolinkingModuleResolution":false,"serverActions":false,"serverComponents":false,"reactCompiler":false,"optimizeGraph":false,"treeshaking":false,"logbox":false}}
+{"_e":"expo:dev-tools-plugin:load","_t":1787193944242,"plugins":[]}
+{"_e":"metro:instantiate","_t":1787193944786,"atlas":false,"workers":6,"host":"::","port":8081}
+{"_e":"metro:bundling:started","_t":1787193965349,"id":"1","platform":"web","environment":null,"entry":"index.ts"}
+{"_e":"metro:bundling:progress","_t":1787193965350,"id":"1","progress":0,"total":1,"current":0}
+{"_e":"metro:bundling:progress","_t":1787193965354,"id":"1","progress":0,"total":1,"current":0}
+{"_e":"metro:bundling:progress","_t":1787193965747,"id":"1","progress":0.010000000000000002,"total":1,"current":1}
+{"_e":"metro:bundling:progress","_t":1787193965850,"id":"1","progress":0.014692378328741967,"total":33,"current":4}
+{"_e":"metro:bundling:progress","_t":1787193965957,"id":"1","progress":0.09467455621301776,"total":39,"current":12}
+{"_e":"metro:bundling:progress","_t":1787193966059,"id":"1","progress":0.2743764172335601,"total":42,"current":22}
+{"_e":"metro:bundling:progress","_t":1787193966166,"id":"1","progress":0.5625,"total":48,"current":36}
+{"_e":"metro:bundling:progress","_t":1787193966266,"id":"1","progress":0.709141274238227,"total":57,"current":48}
+{"_e":"metro:bundling:progress","_t":1787193966367,"id":"1","progress":0.709141274238227,"total":126,"current":66}
+{"_e":"metro:bundling:progress","_t":1787193966472,"id":"1","progress":0.709141274238227,"total":139,"current":73}
+{"_e":"metro:bundling:progress","_t":1787193966571,"id":"1","progress":0.709141274238227,"total":156,"current":96}
+{"_e":"metro:bundling:progress","_t":1787193966672,"id":"1","progress":0.709141274238227,"total":217,"current":124}
+{"_e":"metro:bundling:progress","_t":1787193966772,"id":"1","progress":0.709141274238227,"total":236,"current":141}
+{"_e":"metro:bundling:progress","_t":1787193966872,"id":"1","progress":0.709141274238227,"total":296,"current":172}
+{"_e":"metro:bundling:progress","_t":1787193966972,"id":"1","progress":0.709141274238227,"total":331,"current":201}
+{"_e":"metro:bundling:progress","_t":1787193967073,"id":"1","progress":0.709141274238227,"total":363,"current":231}
+{"_e":"metro:bundling:progress","_t":1787193967173,"id":"1","progress":0.709141274238227,"total":381,"current":277}
+{"_e":"metro:bundling:progress","_t":1787193967274,"id":"1","progress":0.709141274238227,"total":423,"current":312}
+{"_e":"metro:bundling:progress","_t":1787193967377,"id":"1","progress":0.709141274238227,"total":431,"current":351}
+{"_e":"metro:bundling:progress","_t":1787193967477,"id":"1","progress":0.734154553746434,"total":454,"current":389}
+{"_e":"metro:bundling:progress","_t":1787193967577,"id":"1","progress":0.7620431335662456,"total":488,"current":426}
+{"_e":"metro:bundling:progress","_t":1787193967677,"id":"1","progress":0.77935791015625,"total":512,"current":452}
+{"_e":"metro:bundling:progress","_t":1787193967777,"id":"1","progress":0.8959850824544024,"total":524,"current":496}
+{"_e":"metro:bundling:progress","_t":1787193967877,"id":"1","progress":0.9184027777777779,"total":552,"current":529}
+{"_e":"metro:bundling:progress","_t":1787193967977,"id":"1","progress":0.992779807003718,"total":553,"current":551}
+{"_e":"metro:bundling:progress","_t":1787193968806,"id":"1","progress":0.9963866334869149,"total":553,"current":552}
+{"_e":"metro:bundling:failed","_t":1787193968829,"id":"1","message":"SyntaxError: /Users/michaelsigler/Downloads/files/lime-app/src/lib/supabase.ts: Identifier 'SUPABASE_URL' has already been declared. (18:6)\n\n  16 |   },\n  17 | });\n> 18 | const SUPABASE_URL = 'https://ypnrsbgljqzmvlqfmaxx.supabase.co';\n     |       ^\n  19 | const SUPABASE_ANON_KEY = 'paste-your-long-eyJ-key-here';\n  20 |\n  21 |","importStack":null,"filename":"src/lib/supabase.ts","targetModuleName":null,"originModulePath":null}
+{"_e":"root:init","_t":1787194235704,"format":"v0-jsonl","version":"57.0.16"}
+{"_e":"env:mode","_t":1787194235704,"nodeEnv":"development","babelEnv":"development","mode":"development"}
+{"_e":"env:load","_t":1787194235705,"mode":"development","files":[],"env":{}}
+{"_e":"devserver:start","_t":1787194235962,"mode":"development","web":true,"baseUrl":"","asyncRoutes":false,"routerRoot":"../../../app","serverComponents":false,"serverActions":false,"serverRendering":false,"apiRoutes":false,"exporting":false}
+{"_e":"metro:config","_t":1787194236189,"serverRoot":"../../..","projectRoot":"../../..","exporting":false,"flags":{"autolinkingModuleResolution":false,"serverActions":false,"serverComponents":false,"reactCompiler":false,"optimizeGraph":false,"treeshaking":false,"logbox":false}}
+{"_e":"expo:dev-tools-plugin:load","_t":1787194236313,"plugins":[]}
+{"_e":"metro:instantiate","_t":1787194236885,"atlas":false,"workers":6,"host":"::","port":8081}
+{"_e":"metro:bundling:started","_t":1787194251948,"id":"1","platform":"web","environment":null,"entry":"index.ts"}
+{"_e":"metro:bundling:progress","_t":1787194251949,"id":"1","progress":0,"total":1,"current":0}
+{"_e":"metro:bundling:progress","_t":1787194251953,"id":"1","progress":0,"total":1,"current":0}
+{"_e":"metro:bundling:progress","_t":1787194252309,"id":"1","progress":0.010000000000000002,"total":1,"current":1}
+{"_e":"metro:bundling:progress","_t":1787194252413,"id":"1","progress":0.22145328719723184,"total":17,"current":8}
+{"_e":"metro:bundling:progress","_t":1787194252514,"id":"1","progress":0.23591836734693877,"total":35,"current":17}
+{"_e":"metro:bundling:progress","_t":1787194252617,"id":"1","progress":0.26176311519740403,"total":43,"current":22}
+{"_e":"metro:bundling:progress","_t":1787194252689,"id":"1","progress":0.28610059491617085,"total":43,"current":23}
+{"_e":"metro:bundling:progress","_t":1787194252789,"id":"1","progress":0.28610059491617085,"total":92,"current":43}
+{"_e":"metro:bundling:progress","_t":1787194252890,"id":"1","progress":0.28610059491617085,"total":152,"current":73}
+{"_e":"metro:bundling:progress","_t":1787194252989,"id":"1","progress":0.28610059491617085,"total":169,"current":88}
+{"_e":"metro:bundling:progress","_t":1787194253093,"id":"1","progress":0.38292814429957844,"total":202,"current":125}
+{"_e":"metro:bundling:progress","_t":1787194253192,"id":"1","progress":0.38292814429957844,"total":254,"current":155}
+{"_e":"metro:bundling:progress","_t":1787194253292,"id":"1","progress":0.3860429282006921,"total":272,"current":169}
+{"_e":"metro:bundling:progress","_t":1787194253392,"id":"1","progress":0.4273370874901672,"total":283,"current":185}
+{"_e":"metro:bundling:progress","_t":1787194253493,"id":"1","progress":0.48373808349769887,"total":312,"current":217}
+{"_e":"metro:bundling:progress","_t":1787194253592,"id":"1","progress":0.48373808349769887,"total":367,"current":247}
+{"_e":"metro:bundling:progress","_t":1787194253692,"id":"1","progress":0.48373808349769887,"total":388,"current":263}
+{"_e":"metro:bundling:progress","_t":1787194253792,"id":"1","progress":0.5344360686509526,"total":409,"current":299}
+{"_e":"metro:bundling:progress","_t":1787194253892,"id":"1","progress":0.6302946870766581,"total":427,"current":339}
+{"_e":"metro:bundling:progress","_t":1787194253993,"id":"1","progress":0.6876859012492563,"total":451,"current":374}
+{"_e":"metro:bundling:progress","_t":1787194254093,"id":"1","progress":0.7679993977065795,"total":461,"current":404}
+{"_e":"metro:bundling:progress","_t":1787194254193,"id":"1","progress":0.7991839592671195,"total":481,"current":430}
+{"_e":"metro:bundling:progress","_t":1787194254302,"id":"1","progress":0.7991839592671195,"total":529,"current":462}
+{"_e":"metro:bundling:progress","_t":1787194254402,"id":"1","progress":0.8676577503429355,"total":540,"current":503}
+{"_e":"metro:bundling:progress","_t":1787194254507,"id":"1","progress":0.9784179013698092,"total":553,"current":547}
+{"_e":"metro:bundling:progress","_t":1787194254608,"id":"1","progress":0.992779807003718,"total":553,"current":551}
+{"_e":"metro:bundling:progress","_t":1787194255159,"id":"1","progress":0.9963866334869149,"total":553,"current":552}
+{"_e":"metro:bundling:failed","_t":1787194255191,"id":"1","message":"SyntaxError: /Users/michaelsigler/Downloads/files/lime-app/src/lib/supabase.ts: Identifier 'SUPABASE_URL' has already been declared. (18:6)\n\n  16 |   },\n  17 | });\n> 18 | const SUPABASE_URL = 'https://ypnrsbgljqzmvlqfmaxx.supabase.co';\n     |       ^\n  19 | const SUPABASE_ANON_KEY = 'paste-your-long-eyJ-key-here';\n  20 |\n  21 |","importStack":null,"filename":"src/lib/supabase.ts","targetModuleName":null,"originModulePath":null}
+{"_e":"root:init","_t":1787194755778,"format":"v0-jsonl","version":"57.0.16"}
+{"_e":"env:mode","_t":1787194755779,"nodeEnv":"development","babelEnv":"development","mode":"development"}
+{"_e":"env:load","_t":1787194755780,"mode":"development","files":[],"env":{}}
+{"_e":"devserver:start","_t":1787194756084,"mode":"development","web":true,"baseUrl":"","asyncRoutes":false,"routerRoot":"../../../app","serverComponents":false,"serverActions":false,"serverRendering":false,"apiRoutes":false,"exporting":false}
+{"_e":"metro:config","_t":1787194756371,"serverRoot":"../../..","projectRoot":"../../..","exporting":false,"flags":{"autolinkingModuleResolution":false,"serverActions":false,"serverComponents":false,"reactCompiler":false,"optimizeGraph":false,"treeshaking":false,"logbox":false}}
+{"_e":"expo:dev-tools-plugin:load","_t":1787194756506,"plugins":[]}
+{"_e":"metro:instantiate","_t":1787194757098,"atlas":false,"workers":6,"host":"::","port":8081}
+{"_e":"metro:bundling:started","_t":1787194764856,"id":"1","platform":"web","environment":null,"entry":"index.ts"}
+{"_e":"metro:bundling:progress","_t":1787194764856,"id":"1","progress":0,"total":1,"current":0}
+{"_e":"metro:bundling:progress","_t":1787194764858,"id":"1","progress":0,"total":1,"current":0}
+{"_e":"metro:bundling:progress","_t":1787194765212,"id":"1","progress":0.010000000000000002,"total":1,"current":1}
+{"_e":"metro:bundling:progress","_t":1787194765312,"id":"1","progress":0.017013232514177693,"total":23,"current":3}
+{"_e":"metro:bundling:progress","_t":1787194765421,"id":"1","progress":0.029149315883402742,"total":41,"current":7}
+{"_e":"metro:bundling:progress","_t":1787194765534,"id":"1","progress":0.04591836734693877,"total":42,"current":9}
+{"_e":"metro:bundling:progress","_t":1787194765635,"id":"1","progress":0.052517361111111105,"total":48,"current":11}
+{"_e":"metro:bundling:progress","_t":1787194765737,"id":"1","progress":0.1024,"total":50,"current":16}
+{"_e":"metro:bundling:progress","_t":1787194765837,"id":"1","progress":0.1024,"total":89,"current":24}
+{"_e":"metro:bundling:progress","_t":1787194765938,"id":"1","progress":0.15123456790123457,"total":108,"current":42}
+{"_e":"metro:bundling:progress","_t":1787194766040,"id":"1","progress":0.15123456790123457,"total":148,"current":57}
+{"_e":"metro:bundling:progress","_t":1787194766141,"id":"1","progress":0.24393961927424151,"total":164,"current":81}
+{"_e":"metro:bundling:progress","_t":1787194766241,"id":"1","progress":0.24393961927424151,"total":217,"current":102}
+{"_e":"metro:bundling:progress","_t":1787194766342,"id":"1","progress":0.29671491836869585,"total":246,"current":134}
+{"_e":"metro:bundling:progress","_t":1787194766443,"id":"1","progress":0.35508538187277167,"total":292,"current":174}
+{"_e":"metro:bundling:progress","_t":1787194766544,"id":"1","progress":0.40750959218385346,"total":318,"current":203}
+{"_e":"metro:bundling:progress","_t":1787194766645,"id":"1","progress":0.4333105791336142,"total":357,"current":235}
+{"_e":"metro:bundling:progress","_t":1787194766745,"id":"1","progress":0.5475206463066651,"total":373,"current":276}
+{"_e":"metro:bundling:progress","_t":1787194766845,"id":"1","progress":0.5972809023014783,"total":405,"current":313}
+{"_e":"metro:bundling:progress","_t":1787194766945,"id":"1","progress":0.6496434457488172,"total":433,"current":349}
+{"_e":"metro:bundling:progress","_t":1787194767047,"id":"1","progress":0.7303848318422635,"total":454,"current":388}
+{"_e":"metro:bundling:progress","_t":1787194767147,"id":"1","progress":0.7893074243562599,"total":484,"current":430}
+{"_e":"metro:bundling:progress","_t":1787194767247,"id":"1","progress":0.8775172241403553,"total":506,"current":474}
+{"_e":"metro:bundling:progress","_t":1787194767347,"id":"1","progress":0.9028505875464659,"total":542,"current":515}
+{"_e":"metro:bundling:progress","_t":1787194767447,"id":"1","progress":0.9819661048099138,"total":552,"current":547}
+{"_e":"metro:bundling:progress","_t":1787194767548,"id":"1","progress":0.992779807003718,"total":553,"current":551}
+{"_e":"metro:bundling:progress","_t":1787194768388,"id":"1","progress":0.9963866334869149,"total":553,"current":552}
+{"_e":"metro:bundling:failed","_t":1787194768411,"id":"1","message":"SyntaxError: /Users/michaelsigler/Downloads/files/lime-app/src/lib/supabase.ts: Identifier 'SUPABASE_URL' has already been declared. (18:6)\n\n  16 |   },\n  17 | });\n> 18 | const SUPABASE_URL = 'https://ypnrsbgljqzmvlqfmaxx.supabase.co';\n     |       ^\n  19 | const SUPABASE_ANON_KEY = 'paste-your-long-eyJ-key-here';\n  20 |\n  21 |","importStack":null,"filename":"src/lib/supabase.ts","targetModuleName":null,"originModulePath":null}
+{"_e":"root:init","_t":1787196914934,"format":"v0-jsonl","version":"57.0.16"}
+{"_e":"env:mode","_t":1787196914934,"nodeEnv":"development","babelEnv":"development","mode":"development"}
+{"_e":"env:load","_t":1787196914936,"mode":"development","files":[],"env":{}}
+{"_e":"devserver:start","_t":1787196915202,"mode":"development","web":true,"baseUrl":"","asyncRoutes":false,"routerRoot":"../../../app","serverComponents":false,"serverActions":false,"serverRendering":false,"apiRoutes":false,"exporting":false}
+{"_e":"metro:config","_t":1787196915447,"serverRoot":"../../..","projectRoot":"../../..","exporting":false,"flags":{"autolinkingModuleResolution":false,"serverActions":false,"serverComponents":false,"reactCompiler":false,"optimizeGraph":false,"treeshaking":false,"logbox":false}}
+{"_e":"expo:dev-tools-plugin:load","_t":1787196915577,"plugins":[]}
+{"_e":"metro:instantiate","_t":1787196916151,"atlas":false,"workers":6,"host":"::","port":8081}
+{"_e":"metro:bundling:started","_t":1787196963062,"id":"1","platform":"web","environment":null,"entry":"index.ts"}
+{"_e":"metro:bundling:done","_t":1787196964794,"id":"1","total":600,"ms":1732.534417}
+{"_e":"root:init","_t":1787196984862,"format":"v0-jsonl","version":"57.0.16"}
+{"_e":"env:mode","_t":1787196984874,"nodeEnv":"development","babelEnv":"development","mode":"development"}
+{"_e":"env:load","_t":1787196984875,"mode":"development","files":[],"env":{}}
+{"_e":"devserver:start","_t":1787196985106,"mode":"development","web":true,"baseUrl":"","asyncRoutes":false,"routerRoot":"../../../app","serverComponents":false,"serverActions":false,"serverRendering":false,"apiRoutes":false,"exporting":false}
+{"_e":"metro:config","_t":1787196985276,"serverRoot":"../../..","projectRoot":"../../..","exporting":false,"flags":{"autolinkingModuleResolution":false,"serverActions":false,"serverComponents":false,"reactCompiler":false,"optimizeGraph":false,"treeshaking":false,"logbox":false}}
+{"_e":"expo:dev-tools-plugin:load","_t":1787196985398,"plugins":[]}
+{"_e":"metro:instantiate","_t":1787196985949,"atlas":false,"workers":6,"host":"::","port":8081}
+{"_e":"root:init","_t":1787197184090,"format":"v0-jsonl","version":"57.0.16"}
+{"_e":"env:mode","_t":1787197184090,"nodeEnv":"development","babelEnv":"development","mode":"development"}
+{"_e":"env:load","_t":1787197184092,"mode":"development","files":[],"env":{}}
+{"_e":"devserver:start","_t":1787197184352,"mode":"development","web":true,"baseUrl":"","asyncRoutes":false,"routerRoot":"../../../app","serverComponents":false,"serverActions":false,"serverRendering":false,"apiRoutes":false,"exporting":false}
+{"_e":"metro:config","_t":1787197184594,"serverRoot":"../../..","projectRoot":"../../..","exporting":false,"flags":{"autolinkingModuleResolution":false,"serverActions":false,"serverComponents":false,"reactCompiler":false,"optimizeGraph":false,"treeshaking":false,"logbox":false}}
+{"_e":"expo:dev-tools-plugin:load","_t":1787197184720,"plugins":[]}
+{"_e":"metro:instantiate","_t":1787197185281,"atlas":false,"workers":6,"host":"::","port":8081}
+{"_e":"metro:bundling:started","_t":1787197207694,"id":"1","platform":"web","environment":null,"entry":"index.ts"}
+{"_e":"metro:bundling:done","_t":1787197207995,"id":"1","total":520,"ms":301.212084}
+{"_e":"metro:bundling:started","_t":1787197612469,"id":"2","platform":"web","environment":null,"entry":"index.ts"}
+{"_e":"metro:bundling:done","_t":1787197612513,"id":"2","total":1,"ms":42.680708}
+{"_e":"metro:client_log","_t":1787197612728,"level":"log","data":["Running application \"main\" with appParams:\n","{\"hydrate\": undefined, \"rootTag\": \"#root\"}","\nDevelopment-level warnings: ON.\nPerformance optimizations: OFF."]}
+{"_e":"metro:client_log","_t":1787197612729,"level":"error","data":["[TypeError: ExpoSecureStore.default.getValueWithKeyAsync is not a function. (In 'ExpoSecureStore.default.getValueWithKeyAsync(key, options)', 'ExpoSecureStore.default.getValueWithKeyAsync' is undefined)]","getItemAsync@http://localhost:8081/index.ts.bundle:93124:62\n@http://localhost:8081/index.ts.bundle:83628:40\n_recoverAndRefresh@http://localhost:8081/index.ts.bundle:89284:67\n_initialize@http://localhost:8081/index.ts.bundle:85179:38"]}
+{"_e":"metro:client_log","_t":1787197612729,"level":"error","data":["Auto refresh tick failed with error. This is likely a transient error.","[TypeError: ExpoSecureStore.default.getValueWithKeyAsync is not a function. (In 'ExpoSecureStore.default.getValueWithKeyAsync(key, options)', 'ExpoSecureStore.default.getValueWithKeyAsync' is undefined)]","getItemAsync@http://localhost:8081/index.ts.bundle:93124:62\n@http://localhost:8081/index.ts.bundle:83628:40\n__loadSession@http://localhost:8081/index.ts.bundle:87499:65\n_useSession@http://localhost:8081/index.ts.bundle:87480:48\n_autoRefreshTokenTick@http://localhost:8081/index.ts.bundle:89880:33\n@http://localhost:8081/index.ts.bundle:89675:41"]}
+{"_e":"metro:client_log","_t":1787197612730,"level":"error","data":["[TypeError: ExpoSecureStore.default.getValueWithKeyAsync is not a function. (In 'ExpoSecureStore.default.getValueWithKeyAsync(key, options)', 'ExpoSecureStore.default.getValueWithKeyAsync' is undefined)]","getItemAsync@http://localhost:8081/index.ts.bundle:93124:62\n@http://localhost:8081/index.ts.bundle:83628:40\n__loadSession@http://localhost:8081/index.ts.bundle:87499:65\n_useSession@http://localhost:8081/index.ts.bundle:87480:48\n_emitInitialSession@http://localhost:8081/index.ts.bundle:88793:36\n@http://localhost:8081/index.ts.bundle:88783:41"]}
+{"_e":"metro:client_log","_t":1787197612739,"level":"error","data":["[TypeError: ExpoSecureStore.default.getValueWithKeyAsync is not a function. (In 'ExpoSecureStore.default.getValueWithKeyAsync(key, options)', 'ExpoSecureStore.default.getValueWithKeyAsync' is undefined)]","getItemAsync@http://localhost:8081/index.ts.bundle:93124:62\n@http://localhost:8081/index.ts.bundle:83628:40\n__loadSession@http://localhost:8081/index.ts.bundle:87499:65\n_useSession@http://localhost:8081/index.ts.bundle:87480:48\ngetSession@http://localhost:8081/index.ts.bundle:87410:36"]}
+{"_e":"metro:client_log","_t":1787197612740,"level":"error","data":["[TypeError: ExpoSecureStore.default.getValueWithKeyAsync is not a function. (In 'ExpoSecureStore.default.getValueWithKeyAsync(key, options)', 'ExpoSecureStore.default.getValueWithKeyAsync' is undefined)]","getItemAsync@http://localhost:8081/index.ts.bundle:93124:62\n@http://localhost:8081/index.ts.bundle:83628:40\n__loadSession@http://localhost:8081/index.ts.bundle:87499:65\n_useSession@http://localhost:8081/index.ts.bundle:87480:48\n_emitInitialSession@http://localhost:8081/index.ts.bundle:88793:36\n@http://localhost:8081/index.ts.bundle:88783:41"]}
+{"_e":"metro:bundling:started","_t":1787197636220,"id":"3","platform":"web","environment":null,"entry":"index.ts"}
+{"_e":"metro:bundling:done","_t":1787197636261,"id":"3","total":1,"ms":40.8335}
+{"_e":"metro:client_log","_t":1787197636444,"level":"log","data":["Running application \"main\" with appParams:\n","{\"hydrate\": undefined, \"rootTag\": \"#root\"}","\nDevelopment-level warnings: ON.\nPerformance optimizations: OFF."]}
+{"_e":"metro:client_log","_t":1787197636444,"level":"error","data":["[TypeError: ExpoSecureStore.default.getValueWithKeyAsync is not a function. (In 'ExpoSecureStore.default.getValueWithKeyAsync(key, options)', 'ExpoSecureStore.default.getValueWithKeyAsync' is undefined)]","getItemAsync@http://localhost:8081/index.ts.bundle:93124:62\n@http://localhost:8081/index.ts.bundle:83628:40\n_recoverAndRefresh@http://localhost:8081/index.ts.bundle:89284:67\n_initialize@http://localhost:8081/index.ts.bundle:85179:38"]}
+{"_e":"metro:client_log","_t":1787197636445,"level":"error","data":["[TypeError: ExpoSecureStore.default.getValueWithKeyAsync is not a function. (In 'ExpoSecureStore.default.getValueWithKeyAsync(key, options)', 'ExpoSecureStore.default.getValueWithKeyAsync' is undefined)]","getItemAsync@http://localhost:8081/index.ts.bundle:93124:62\n@http://localhost:8081/index.ts.bundle:83628:40\n__loadSession@http://localhost:8081/index.ts.bundle:87499:65\n_useSession@http://localhost:8081/index.ts.bundle:87480:48\n_emitInitialSession@http://localhost:8081/index.ts.bundle:88793:36\n@http://localhost:8081/index.ts.bundle:88783:41"]}
+{"_e":"metro:client_log","_t":1787197636445,"level":"error","data":["Auto refresh tick failed with error. This is likely a transient error.","[TypeError: ExpoSecureStore.default.getValueWithKeyAsync is not a function. (In 'ExpoSecureStore.default.getValueWithKeyAsync(key, options)', 'ExpoSecureStore.default.getValueWithKeyAsync' is undefined)]","getItemAsync@http://localhost:8081/index.ts.bundle:93124:62\n@http://localhost:8081/index.ts.bundle:83628:40\n__loadSession@http://localhost:8081/index.ts.bundle:87499:65\n_useSession@http://localhost:8081/index.ts.bundle:87480:48\n_autoRefreshTokenTick@http://localhost:8081/index.ts.bundle:89880:33\n@http://localhost:8081/index.ts.bundle:89675:41"]}
+{"_e":"metro:client_log","_t":1787197636461,"level":"error","data":["[TypeError: ExpoSecureStore.default.getValueWithKeyAsync is not a function. (In 'ExpoSecureStore.default.getValueWithKeyAsync(key, options)', 'ExpoSecureStore.default.getValueWithKeyAsync' is undefined)]","getItemAsync@http://localhost:8081/index.ts.bundle:93124:62\n@http://localhost:8081/index.ts.bundle:83628:40\n__loadSession@http://localhost:8081/index.ts.bundle:87499:65\n_useSession@http://localhost:8081/index.ts.bundle:87480:48\ngetSession@http://localhost:8081/index.ts.bundle:87410:36"]}
+{"_e":"metro:client_log","_t":1787197636461,"level":"error","data":["[TypeError: ExpoSecureStore.default.getValueWithKeyAsync is not a function. (In 'ExpoSecureStore.default.getValueWithKeyAsync(key, options)', 'ExpoSecureStore.default.getValueWithKeyAsync' is undefined)]","getItemAsync@http://localhost:8081/index.ts.bundle:93124:62\n@http://localhost:8081/index.ts.bundle:83628:40\n__loadSession@http://localhost:8081/index.ts.bundle:87499:65\n_useSession@http://localhost:8081/index.ts.bundle:87480:48\n_emitInitialSession@http://localhost:8081/index.ts.bundle:88793:36\n@http://localhost:8081/index.ts.bundle:88783:41"]}
+{"_e":"metro:client_log","_t":1787197659995,"level":"error","data":["[TypeError: ExpoSecureStore.default.getValueWithKeyAsync is not a function. (In 'ExpoSecureStore.default.getValueWithKeyAsync(key, options)', 'ExpoSecureStore.default.getValueWithKeyAsync' is undefined)]","getItemAsync@http://localhost:8081/index.ts.bundle:93124:62\n@http://localhost:8081/index.ts.bundle:83628:40\n_recoverAndRefresh@http://localhost:8081/index.ts.bundle:89284:67\n_onVisibilityChanged@http://localhost:8081/index.ts.bundle:89966:42"]}
+{"_e":"metro:client_log","_t":1787197659996,"level":"error","data":["Auto refresh tick failed with error. This is likely a transient error.","[TypeError: ExpoSecureStore.default.getValueWithKeyAsync is not a function. (In 'ExpoSecureStore.default.getValueWithKeyAsync(key, options)', 'ExpoSecureStore.default.getValueWithKeyAsync' is undefined)]","getItemAsync@http://localhost:8081/index.ts.bundle:93124:62\n@http://localhost:8081/index.ts.bundle:83628:40\n__loadSession@http://localhost:8081/index.ts.bundle:87499:65\n_useSession@http://localhost:8081/index.ts.bundle:87480:48\n_autoRefreshTokenTick@http://localhost:8081/index.ts.bundle:89880:33\n@http://localhost:8081/index.ts.bundle:89675:41"]}
+{"_e":"metro:client_log","_t":1787197961885,"level":"warn","data":["GoTrueClient@sb-ypnrsbgljqzmvlqfmaxx-auth-token:1 (2.112.3) 2026-08-20T03:52:41.884Z Multiple GoTrueClient instances detected in the same browser context. It is not an error, but this should be avoided as it may produce undefined behavior when used concurrently under the same storage key."]}
+{"_e":"metro:client_log","_t":1787197961915,"level":"error","data":["[TypeError: ExpoSecureStore.default.getValueWithKeyAsync is not a function. (In 'ExpoSecureStore.default.getValueWithKeyAsync(key, options)', 'ExpoSecureStore.default.getValueWithKeyAsync' is undefined)]","getItemAsync@http://localhost:8081/index.ts.bundle:93124:62\n@http://localhost:8081/index.ts.bundle:83628:40\n_recoverAndRefresh@http://localhost:8081/index.ts.bundle:89284:67\n_initialize@http://localhost:8081/index.ts.bundle:85179:38"]}
+{"_e":"metro:client_log","_t":1787197961917,"level":"error","data":["[TypeError: ExpoSecureStore.default.getValueWithKeyAsync is not a function. (In 'ExpoSecureStore.default.getValueWithKeyAsync(key, options)', 'ExpoSecureStore.default.getValueWithKeyAsync' is undefined)]","getItemAsync@http://localhost:8081/index.ts.bundle:93124:62\n@http://localhost:8081/index.ts.bundle:83628:40\n__loadSession@http://localhost:8081/index.ts.bundle:87499:65\n_useSession@http://localhost:8081/index.ts.bundle:87480:48\n_emitInitialSession@http://localhost:8081/index.ts.bundle:88793:36\n@http://localhost:8081/index.ts.bundle:88783:41"]}
+{"_e":"metro:client_log","_t":1787197962059,"level":"error","data":["[TypeError: ExpoSecureStore.default.getValueWithKeyAsync is not a function. (In 'ExpoSecureStore.default.getValueWithKeyAsync(key, options)', 'ExpoSecureStore.default.getValueWithKeyAsync' is undefined)]","getItemAsync@http://localhost:8081/index.ts.bundle:93124:62\n@http://localhost:8081/index.ts.bundle:83628:40\n__loadSession@http://localhost:8081/index.ts.bundle:87499:65\n_useSession@http://localhost:8081/index.ts.bundle:87480:48\ngetSession@http://localhost:8081/index.ts.bundle:87410:36"]}
+{"_e":"metro:client_log","_t":1787197962059,"level":"error","data":["[TypeError: ExpoSecureStore.default.getValueWithKeyAsync is not a function. (In 'ExpoSecureStore.default.getValueWithKeyAsync(key, options)', 'ExpoSecureStore.default.getValueWithKeyAsync' is undefined)]","getItemAsync@http://localhost:8081/index.ts.bundle:93124:62\n@http://localhost:8081/index.ts.bundle:83628:40\n__loadSession@http://localhost:8081/index.ts.bundle:87499:65\n_useSession@http://localhost:8081/index.ts.bundle:87480:48\n_emitInitialSession@http://localhost:8081/index.ts.bundle:88793:36\n@http://localhost:8081/index.ts.bundle:88783:41"]}
+{"_e":"metro:bundling:started","_t":1787197970401,"id":"4","platform":"web","environment":null,"entry":"index.ts"}
+{"_e":"metro:bundling:done","_t":1787197970428,"id":"4","total":1,"ms":27.390541}
+{"_e":"metro:client_log","_t":1787197992422,"level":"warn","data":["GoTrueClient@sb-ypnrsbgljqzmvlqfmaxx-auth-token:2 (2.112.3) 2026-08-20T03:53:12.421Z Multiple GoTrueClient instances detected in the same browser context. It is not an error, but this should be avoided as it may produce undefined behavior when used concurrently under the same storage key."]}
+{"_e":"metro:bundling:started","_t":1787197999805,"id":"5","platform":"web","environment":null,"entry":"index.ts"}
+{"_e":"metro:bundling:done","_t":1787197999827,"id":"5","total":1,"ms":22.344166}
+{"_e":"root:init","_t":1787198163282,"format":"v0-jsonl","version":"57.0.16"}
+{"_e":"env:mode","_t":1787198163283,"nodeEnv":"development","babelEnv":"development","mode":"development"}
+{"_e":"env:load","_t":1787198163285,"mode":"development","files":[],"env":{}}
+{"_e":"devserver:start","_t":1787198163562,"mode":"development","web":true,"baseUrl":"","asyncRoutes":false,"routerRoot":"../../../app","serverComponents":false,"serverActions":false,"serverRendering":false,"apiRoutes":false,"exporting":false}
+{"_e":"metro:config","_t":1787198163817,"serverRoot":"../../..","projectRoot":"../../..","exporting":false,"flags":{"autolinkingModuleResolution":false,"serverActions":false,"serverComponents":false,"reactCompiler":false,"optimizeGraph":false,"treeshaking":false,"logbox":false}}
+{"_e":"expo:dev-tools-plugin:load","_t":1787198163941,"plugins":[]}
+{"_e":"metro:instantiate","_t":1787198164515,"atlas":false,"workers":6,"host":"::","port":8081}
+{"_e":"metro:bundling:started","_t":1787198229930,"id":"1","platform":"web","environment":null,"entry":"index.ts"}
+{"_e":"metro:bundling:done","_t":1787198230252,"id":"1","total":479,"ms":321.229583}
+{"_e":"metro:bundling:started","_t":1787198368783,"id":"2","platform":"web","environment":null,"entry":"index.ts"}
+{"_e":"metro:bundling:done","_t":1787198368833,"id":"2","total":1,"ms":47.402917}
+{"_e":"metro:client_log","_t":1787198369037,"level":"log","data":["Running application \"main\" with appParams:\n","{\"hydrate\": undefined, \"rootTag\": \"#root\"}","\nDevelopment-level warnings: ON.\nPerformance optimizations: OFF."]}
+{"_e":"metro:bundling:started","_t":1787198385508,"id":"3","platform":"web","environment":null,"entry":"index.ts"}
+{"_e":"metro:bundling:done","_t":1787198385574,"id":"3","total":1,"ms":65.310875}
+{"_e":"metro:client_log","_t":1787198385772,"level":"log","data":["Running application \"main\" with appParams:\n","{\"hydrate\": undefined, \"rootTag\": \"#root\"}","\nDevelopment-level warnings: ON.\nPerformance optimizations: OFF."]}
+{"_e":"metro:client_log","_t":1787198444346,"level":"warn","data":["props.pointerEvents is deprecated. Use style.pointerEvents"]}
+{"_e":"metro:bundling:started","_t":1787198744599,"id":"4","platform":"web","environment":null,"entry":"index.ts"}
+{"_e":"metro:bundling:done","_t":1787198744630,"id":"4","total":1,"ms":30.641041}
+{"_e":"metro:bundling:started","_t":1787198788787,"id":"5","platform":"web","environment":null,"entry":"index.ts"}
+{"_e":"metro:bundling:done","_t":1787198788834,"id":"5","total":1,"ms":45.174958}
+{"_e":"metro:client_log","_t":1787198789044,"level":"log","data":["Running application \"main\" with appParams:\n","{\"hydrate\": undefined, \"rootTag\": \"#root\"}","\nDevelopment-level warnings: ON.\nPerformance optimizations: OFF."]}
+{"_e":"metro:client_log","_t":1787198821934,"level":"warn","data":["props.pointerEvents is deprecated. Use style.pointerEvents"]}
+{"_e":"metro:client_log","_t":1787198822291,"level":"error","data":["Sign up failed:","[AuthApiError: email rate limit exceeded]","handleError@http://localhost:8081/index.ts.bundle:83149:35"]}
+{"_e":"metro:client_log","_t":1787198823692,"level":"error","data":["Sign up failed:","[AuthApiError: email rate limit exceeded]","handleError@http://localhost:8081/index.ts.bundle:83149:35"]}
+{"_e":"metro:client_log","_t":1787198851878,"level":"error","data":["Sign up failed:","[AuthApiError: email rate limit exceeded]","handleError@http://localhost:8081/index.ts.bundle:83149:35"]}
+{"_e":"metro:bundling:started","_t":1787199071463,"id":"6","platform":"web","environment":null,"entry":"index.ts"}
+{"_e":"metro:bundling:done","_t":1787199071520,"id":"6","total":1,"ms":55.079708}
+{"_e":"metro:client_log","_t":1787199071773,"level":"log","data":["Running application \"main\" with appParams:\n","{\"hydrate\": undefined, \"rootTag\": \"#root\"}","\nDevelopment-level warnings: ON.\nPerformance optimizations: OFF."]}
+{"_e":"metro:client_log","_t":1787199092810,"level":"warn","data":["props.pointerEvents is deprecated. Use style.pointerEvents"]}
+{"_e":"metro:bundling:started","_t":1787199568095,"id":"7","platform":"web","environment":null,"entry":"index.ts"}
+{"_e":"metro:bundling:done","_t":1787199568140,"id":"7","total":1,"ms":44.535042}
+{"_e":"metro:client_log","_t":1787199568337,"level":"log","data":["Running application \"main\" with appParams:\n","{\"hydrate\": undefined, \"rootTag\": \"#root\"}","\nDevelopment-level warnings: ON.\nPerformance optimizations: OFF."]}
+{"_e":"metro:bundling:started","_t":1787199611507,"id":"8","platform":"web","environment":null,"entry":"index.ts"}
+{"_e":"metro:bundling:done","_t":1787199611573,"id":"8","total":1,"ms":66.096417}
+{"_e":"metro:client_log","_t":1787199611776,"level":"log","data":["Running application \"main\" with appParams:\n","{\"hydrate\": undefined, \"rootTag\": \"#root\"}","\nDevelopment-level warnings: ON.\nPerformance optimizations: OFF."]}
+{"_e":"metro:client_log","_t":1787199677793,"level":"warn","data":["props.pointerEvents is deprecated. Use style.pointerEvents"]}
+{"_e":"metro:client_log","_t":1787200471704,"level":"warn","data":["[expo-image-picker] `ImagePicker.MediaTypeOptions` have been deprecated. Use `ImagePicker.MediaType` or an array of `ImagePicker.MediaType` instead."]}
+{"_e":"metro:client_log","_t":1787200697813,"level":"warn","data":["[expo-image-picker] `ImagePicker.MediaTypeOptions` have been deprecated. Use `ImagePicker.MediaType` or an array of `ImagePicker.MediaType` instead."]}
+{"_e":"metro:bundling:started","_t":1787200726556,"id":"a","platform":"web","environment":null,"entry":"index.ts"}
+{"_e":"metro:bundling:done","_t":1787200726611,"id":"a","total":1,"ms":53.391667}
+{"_e":"metro:client_log","_t":1787200726833,"level":"log","data":["Running application \"main\" with appParams:\n","{\"hydrate\": undefined, \"rootTag\": \"#root\"}","\nDevelopment-level warnings: ON.\nPerformance optimizations: OFF."]}
+{"_e":"metro:client_log","_t":1787200726983,"level":"warn","data":["props.pointerEvents is deprecated. Use style.pointerEvents"]}
+{"_e":"metro:client_log","_t":1787200737564,"level":"warn","data":["[expo-image-picker] `ImagePicker.MediaTypeOptions` have been deprecated. Use `ImagePicker.MediaType` or an array of `ImagePicker.MediaType` instead."]}
+{"_e":"metro:bundling:started","_t":1787200765619,"id":"d","platform":"web","environment":null,"entry":"index.ts"}
+{"_e":"metro:bundling:done","_t":1787200765655,"id":"d","total":1,"ms":36.307375}
+{"_e":"metro:client_log","_t":1787200765847,"level":"log","data":["Running application \"main\" with appParams:\n","{\"hydrate\": undefined, \"rootTag\": \"#root\"}","\nDevelopment-level warnings: ON.\nPerformance optimizations: OFF."]}
+{"_e":"metro:client_log","_t":1787200766002,"level":"warn","data":["props.pointerEvents is deprecated. Use style.pointerEvents"]}
+{"_e":"root:init","_t":1787201349056,"format":"v0-jsonl","version":"57.0.16"}
+{"_e":"env:mode","_t":1787201349057,"nodeEnv":"development","babelEnv":"development","mode":"development"}
+{"_e":"env:load","_t":1787201349058,"mode":"development","files":[],"env":{}}
+{"_e":"devserver:start","_t":1787201349337,"mode":"development","web":true,"baseUrl":"","asyncRoutes":false,"routerRoot":"../../../app","serverComponents":false,"serverActions":false,"serverRendering":false,"apiRoutes":false,"exporting":false}
+{"_e":"metro:config","_t":1787201349590,"serverRoot":"../../..","projectRoot":"../../..","exporting":false,"flags":{"autolinkingModuleResolution":false,"serverActions":false,"serverComponents":false,"reactCompiler":false,"optimizeGraph":false,"treeshaking":false,"logbox":false}}
+{"_e":"expo:dev-tools-plugin:load","_t":1787201349719,"plugins":[]}
+{"_e":"metro:instantiate","_t":1787201350302,"atlas":false,"workers":6,"host":"::","port":8081}
+{"_e":"metro:bundling:started","_t":1787201393097,"id":"1","platform":"web","environment":null,"entry":"index.ts"}
+{"_e":"metro:bundling:done","_t":1787201393398,"id":"1","total":509,"ms":300.969041}
+{"_e":"root:init","_t":1787375016345,"format":"v0-jsonl","version":"57.0.16"}
+{"_e":"env:mode","_t":1787375016346,"nodeEnv":"development","babelEnv":"development","mode":"development"}
+{"_e":"env:load","_t":1787375016347,"mode":"development","files":[],"env":{}}
+{"_e":"devserver:start","_t":1787375016631,"mode":"development","web":true,"baseUrl":"","asyncRoutes":false,"routerRoot":"../../../app","serverComponents":false,"serverActions":false,"serverRendering":false,"apiRoutes":false,"exporting":false}
+{"_e":"metro:config","_t":1787375016883,"serverRoot":"../../..","projectRoot":"../../..","exporting":false,"flags":{"autolinkingModuleResolution":false,"serverActions":false,"serverComponents":false,"reactCompiler":false,"optimizeGraph":false,"treeshaking":false,"logbox":false}}
+{"_e":"expo:dev-tools-plugin:load","_t":1787375017013,"plugins":[]}
+{"_e":"metro:instantiate","_t":1787375017601,"atlas":false,"workers":6,"host":"::","port":8081}
+{"_e":"root:init","_t":1787376137709,"format":"v0-jsonl","version":"57.0.16"}
+{"_e":"env:mode","_t":1787376137710,"nodeEnv":"development","babelEnv":"development","mode":"development"}
+{"_e":"env:load","_t":1787376137711,"mode":"development","files":[],"env":{}}
+{"_e":"devserver:start","_t":1787376137883,"mode":"development","web":true,"baseUrl":"","asyncRoutes":false,"routerRoot":"../../../app","serverComponents":false,"serverActions":false,"serverRendering":false,"apiRoutes":false,"exporting":false}
+{"_e":"metro:config","_t":1787376138029,"serverRoot":"../../..","projectRoot":"../../..","exporting":false,"flags":{"autolinkingModuleResolution":false,"serverActions":false,"serverComponents":false,"reactCompiler":false,"optimizeGraph":false,"treeshaking":false,"logbox":false}}
+{"_e":"expo:dev-tools-plugin:load","_t":1787376138152,"plugins":[]}
+{"_e":"metro:instantiate","_t":1787376138736,"atlas":false,"workers":6,"host":"::","port":8081}
+{"_e":"metro:bundling:started","_t":1787376158344,"id":"1","platform":"web","environment":null,"entry":"index.ts"}
+{"_e":"metro:bundling:done","_t":1787376159756,"id":"1","total":614,"ms":1411.661417}
+{"_e":"root:init","_t":1787457247587,"format":"v0-jsonl","version":"57.0.16"}
+{"_e":"env:mode","_t":1787457247588,"nodeEnv":"development","babelEnv":"development","mode":"development"}
+{"_e":"env:load","_t":1787457247589,"mode":"development","files":[],"env":{}}
+{"_e":"devserver:start","_t":1787457247807,"mode":"development","web":true,"baseUrl":"","asyncRoutes":false,"routerRoot":"../../../app","serverComponents":false,"serverActions":false,"serverRendering":false,"apiRoutes":false,"exporting":false}
+{"_e":"metro:config","_t":1787457248040,"serverRoot":"../../..","projectRoot":"../../..","exporting":false,"flags":{"autolinkingModuleResolution":false,"serverActions":false,"serverComponents":false,"reactCompiler":false,"optimizeGraph":false,"treeshaking":false,"logbox":false}}
+{"_e":"expo:dev-tools-plugin:load","_t":1787457248168,"plugins":[]}
+{"_e":"metro:instantiate","_t":1787457248752,"atlas":false,"workers":6,"host":"::","port":8081}
+{"_e":"metro:bundling:started","_t":1787457267648,"id":"1","platform":"web","environment":null,"entry":"index.ts"}
+{"_e":"metro:bundling:done","_t":1787457268859,"id":"1","total":624,"ms":1210.998125}
+{"_e":"root:init","_t":1787561105442,"format":"v0-jsonl","version":"57.0.16"}
+{"_e":"env:mode","_t":1787561105442,"nodeEnv":"development","babelEnv":"development","mode":"development"}
+{"_e":"env:load","_t":1787561105444,"mode":"development","files":[],"env":{}}
+{"_e":"devserver:start","_t":1787561105725,"mode":"development","web":true,"baseUrl":"","asyncRoutes":false,"routerRoot":"../../../app","serverComponents":false,"serverActions":false,"serverRendering":false,"apiRoutes":false,"exporting":false}
+{"_e":"metro:config","_t":1787561105991,"serverRoot":"../../..","projectRoot":"../../..","exporting":false,"flags":{"autolinkingModuleResolution":false,"serverActions":false,"serverComponents":false,"reactCompiler":false,"optimizeGraph":false,"treeshaking":false,"logbox":false}}
+{"_e":"expo:dev-tools-plugin:load","_t":1787561106119,"plugins":[]}
+{"_e":"metro:instantiate","_t":1787561106720,"atlas":false,"workers":6,"host":"::","port":8081}
+{"_e":"root:init","_t":1787622485565,"format":"v0-jsonl","version":"57.0.16"}
+{"_e":"env:mode","_t":1787622485565,"nodeEnv":"development","babelEnv":"development","mode":"development"}
+{"_e":"env:load","_t":1787622485567,"mode":"development","files":[],"env":{}}
+{"_e":"devserver:start","_t":1787622485814,"mode":"development","web":true,"baseUrl":"","asyncRoutes":false,"routerRoot":"../../../app","serverComponents":false,"serverActions":false,"serverRendering":false,"apiRoutes":false,"exporting":false}
+{"_e":"metro:config","_t":1787622486012,"serverRoot":"../../..","projectRoot":"../../..","exporting":false,"flags":{"autolinkingModuleResolution":false,"serverActions":false,"serverComponents":false,"reactCompiler":false,"optimizeGraph":false,"treeshaking":false,"logbox":false}}
+{"_e":"expo:dev-tools-plugin:load","_t":1787622486135,"plugins":[]}
+{"_e":"metro:instantiate","_t":1787622486725,"atlas":false,"workers":6,"host":"::","port":8081}
+{"_e":"metro:bundling:started","_t":1787622505287,"id":"1","platform":"web","environment":null,"entry":"index.ts"}
+{"_e":"metro:bundling:done","_t":1787622509509,"id":"1","total":648,"ms":4222.443958}
+{"_e":"root:init","_t":1787671086116,"format":"v0-jsonl","version":"57.0.16"}
+{"_e":"env:mode","_t":1787671086116,"nodeEnv":"development","babelEnv":"development","mode":"development"}
+{"_e":"env:load","_t":1787671086117,"mode":"development","files":[],"env":{}}
+{"_e":"devserver:start","_t":1787671086292,"mode":"development","web":true,"baseUrl":"","asyncRoutes":false,"routerRoot":"../../../app","serverComponents":false,"serverActions":false,"serverRendering":false,"apiRoutes":false,"exporting":false}
+{"_e":"metro:config","_t":1787671086443,"serverRoot":"../../..","projectRoot":"../../..","exporting":false,"flags":{"autolinkingModuleResolution":false,"serverActions":false,"serverComponents":false,"reactCompiler":false,"optimizeGraph":false,"treeshaking":false,"logbox":false}}
+{"_e":"expo:dev-tools-plugin:load","_t":1787671086567,"plugins":[]}
+{"_e":"metro:instantiate","_t":1787671087160,"atlas":false,"workers":6,"host":"::","port":8081}
+{"_e":"metro:bundling:started","_t":1787671109627,"id":"1","platform":"web","environment":null,"entry":"index.ts"}
+{"_e":"metro:bundling:done","_t":1787671110133,"id":"1","total":650,"ms":506.484}
+{"_e":"root:init","_t":1787673517497,"format":"v0-jsonl","version":"57.0.16"}
+{"_e":"env:mode","_t":1787673517498,"nodeEnv":"development","babelEnv":"development","mode":"development"}
+{"_e":"env:load","_t":1787673517499,"mode":"development","files":[],"env":{}}
+{"_e":"devserver:start","_t":1787673517814,"mode":"development","web":true,"baseUrl":"","asyncRoutes":false,"routerRoot":"../../../app","serverComponents":false,"serverActions":false,"serverRendering":false,"apiRoutes":false,"exporting":false}
+{"_e":"metro:config","_t":1787673518082,"serverRoot":"../../..","projectRoot":"../../..","exporting":false,"flags":{"autolinkingModuleResolution":false,"serverActions":false,"serverComponents":false,"reactCompiler":false,"optimizeGraph":false,"treeshaking":false,"logbox":false}}
+{"_e":"expo:dev-tools-plugin:load","_t":1787673518227,"plugins":[]}
+{"_e":"metro:instantiate","_t":1787673518836,"atlas":false,"workers":6,"host":"::","port":8081}
+{"_e":"metro:bundling:started","_t":1787673787929,"id":"1","platform":"web","environment":null,"entry":"index.ts"}
+{"_e":"metro:bundling:done","_t":1787673793397,"id":"1","total":653,"ms":5467.410458}
+{"_e":"metro:bundling:started","_t":1787712858409,"id":"2","platform":"web","environment":null,"entry":"index.ts"}
+{"_e":"metro:bundling:done","_t":1787712858917,"id":"2","total":1,"ms":506.044458}
+{"_e":"root:init","_t":1787715451741,"format":"v0-jsonl","version":"57.0.16"}
+{"_e":"env:mode","_t":1787715451742,"nodeEnv":"development","babelEnv":"development","mode":"development"}
+{"_e":"env:load","_t":1787715451744,"mode":"development","files":[],"env":{}}
+{"_e":"devserver:start","_t":1787715452048,"mode":"development","web":true,"baseUrl":"","asyncRoutes":false,"routerRoot":"../../../app","serverComponents":false,"serverActions":false,"serverRendering":false,"apiRoutes":false,"exporting":false}
+{"_e":"metro:config","_t":1787715452333,"serverRoot":"../../..","projectRoot":"../../..","exporting":false,"flags":{"autolinkingModuleResolution":false,"serverActions":false,"serverComponents":false,"reactCompiler":false,"optimizeGraph":false,"treeshaking":false,"logbox":false}}
+{"_e":"expo:dev-tools-plugin:load","_t":1787715452478,"plugins":[]}
+{"_e":"metro:instantiate","_t":1787715453137,"atlas":false,"workers":6,"host":"::","port":8082}
+{"_e":"metro:bundling:started","_t":1787715494643,"id":"1","platform":"web","environment":null,"entry":"index.ts"}
+{"_e":"metro:bundling:failed","_t":1787715495680,"id":"1","message":"node_modules/@ffmpeg/ffmpeg/dist/esm/worker.js: node_modules/@ffmpeg/ffmpeg/dist/esm/worker.js:Invalid call at line 19: import(/* @vite-ignore */_coreURL)","importStack":null,"filename":null,"targetModuleName":null,"originModulePath":null}
+{"_e":"root:init","_t":1787779605036,"format":"v0-jsonl","version":"57.0.16"}
+{"_e":"env:mode","_t":1787779605037,"nodeEnv":"development","babelEnv":"development","mode":"development"}
+{"_e":"env:load","_t":1787779605039,"mode":"development","files":[],"env":{}}
+{"_e":"devserver:start","_t":1787779605347,"mode":"development","web":true,"baseUrl":"","asyncRoutes":false,"routerRoot":"../../../app","serverComponents":false,"serverActions":false,"serverRendering":false,"apiRoutes":false,"exporting":false}
+{"_e":"metro:config","_t":1787779605614,"serverRoot":"../../..","projectRoot":"../../..","exporting":false,"flags":{"autolinkingModuleResolution":false,"serverActions":false,"serverComponents":false,"reactCompiler":false,"optimizeGraph":false,"treeshaking":false,"logbox":false}}
+{"_e":"expo:dev-tools-plugin:load","_t":1787779605747,"plugins":[]}
+{"_e":"metro:instantiate","_t":1787779606354,"atlas":false,"workers":6,"host":"::","port":8081}
+{"_e":"root:init","_t":1787780162413,"format":"v0-jsonl","version":"57.0.16"}
+{"_e":"env:mode","_t":1787780162414,"nodeEnv":"development","babelEnv":"development","mode":"development"}
+{"_e":"env:load","_t":1787780162416,"mode":"development","files":[],"env":{}}
+{"_e":"devserver:start","_t":1787780162704,"mode":"development","web":true,"baseUrl":"","asyncRoutes":false,"routerRoot":"../../../app","serverComponents":false,"serverActions":false,"serverRendering":false,"apiRoutes":false,"exporting":false}
+{"_e":"metro:config","_t":1787780162956,"serverRoot":"../../..","projectRoot":"../../..","exporting":false,"flags":{"autolinkingModuleResolution":false,"serverActions":false,"serverComponents":false,"reactCompiler":false,"optimizeGraph":false,"treeshaking":false,"logbox":false}}
+{"_e":"expo:dev-tools-plugin:load","_t":1787780163085,"plugins":[]}
+{"_e":"metro:instantiate","_t":1787780163682,"atlas":false,"workers":6,"host":"::","port":8081}
+{"_e":"metro:bundling:started","_t":1787780861564,"id":"1","platform":"web","environment":null,"entry":"index.ts"}
+{"_e":"metro:bundling:done","_t":1787780862938,"id":"1","total":640,"ms":1374.145458}
+{"_e":"metro:client_log","_t":1787780863180,"level":"warn","data":["\"shadow*\" style props are deprecated. Use \"boxShadow\"."]}
+{"_e":"metro:client_log","_t":1787780863181,"level":"log","data":["Running application \"main\" with appParams:\n","{\"hydrate\": undefined, \"rootTag\": \"#root\"}","\nDevelopment-level warnings: ON.\nPerformance optimizations: OFF."]}
+{"_e":"metro:bundling:started","_t":1787780898935,"id":"5","platform":"web","environment":null,"entry":"index.ts"}
+{"_e":"metro:bundling:done","_t":1787780898990,"id":"5","total":1,"ms":54.566291}
+{"_e":"metro:client_log","_t":1787780899213,"level":"warn","data":["\"shadow*\" style props are deprecated. Use \"boxShadow\"."]}
+{"_e":"metro:client_log","_t":1787780899213,"level":"log","data":["Running application \"main\" with appParams:\n","{\"hydrate\": undefined, \"rootTag\": \"#root\"}","\nDevelopment-level warnings: ON.\nPerformance optimizations: OFF."]}
+{"_e":"metro:bundling:started","_t":1787781123314,"id":"9","platform":"web","environment":null,"entry":"index.ts"}
+{"_e":"metro:bundling:done","_t":1787781123368,"id":"9","total":1,"ms":52.477625}
+{"_e":"metro:client_log","_t":1787781123567,"level":"warn","data":["\"shadow*\" style props are deprecated. Use \"boxShadow\"."]}
+{"_e":"metro:client_log","_t":1787781123568,"level":"log","data":["Running application \"main\" with appParams:\n","{\"hydrate\": undefined, \"rootTag\": \"#root\"}","\nDevelopment-level warnings: ON.\nPerformance optimizations: OFF."]}
+{"_e":"metro:client_log","_t":1787781166309,"level":"warn","data":["props.pointerEvents is deprecated. Use style.pointerEvents"]}
+{"_e":"metro:bundling:started","_t":1787781764362,"id":"d","platform":"web","environment":null,"entry":"index.ts"}
+{"_e":"metro:bundling:done","_t":1787781764406,"id":"d","total":1,"ms":43.753041}
+{"_e":"metro:client_log","_t":1787781764622,"level":"warn","data":["\"shadow*\" style props are deprecated. Use \"boxShadow\"."]}
+{"_e":"metro:client_log","_t":1787781764622,"level":"log","data":["Running application \"main\" with appParams:\n","{\"hydrate\": undefined, \"rootTag\": \"#root\"}","\nDevelopment-level warnings: ON.\nPerformance optimizations: OFF."]}
+{"_e":"metro:bundling:started","_t":1787782273326,"id":"h","platform":"web","environment":null,"entry":"index.ts"}
+{"_e":"metro:bundling:done","_t":1787782273380,"id":"h","total":1,"ms":53.087167}
+{"_e":"metro:client_log","_t":1787782273653,"level":"warn","data":["\"shadow*\" style props are deprecated. Use \"boxShadow\"."]}
+{"_e":"metro:client_log","_t":1787782273654,"level":"log","data":["Running application \"main\" with appParams:\n","{\"hydrate\": undefined, \"rootTag\": \"#root\"}","\nDevelopment-level warnings: ON.\nPerformance optimizations: OFF."]}
+{"_e":"metro:bundling:failed","_t":1787784852429,"id":null,"message":"SyntaxError: /Users/michaelsigler/Downloads/files/lime-app/src/screens/ProfileScreen.tsx: Missing semicolon. (1:8)\n\n> 1 | aaimport React, { useCallback, useState } from 'react';\n    |         ^\n  2 | import { View, Text, TextInput, TouchableOpacity, Alert, StyleSheet, Linking, Modal, Platform } from 'react-native';\n  3 | import { useFocusEffect } from '@react-navigation/native';\n  4 | import { supabase } from '../lib/supabase';","importStack":null,"filename":"src/screens/ProfileScreen.tsx","targetModuleName":null,"originModulePath":null}
+{"_e":"root:init","_t":1787785223400,"format":"v0-jsonl","version":"57.0.16"}
+{"_e":"env:mode","_t":1787785223401,"nodeEnv":"development","babelEnv":"development","mode":"development"}
+{"_e":"env:load","_t":1787785223403,"mode":"development","files":[],"env":{}}
+{"_e":"devserver:start","_t":1787785223732,"mode":"development","web":true,"baseUrl":"","asyncRoutes":false,"routerRoot":"../../../app","serverComponents":false,"serverActions":false,"serverRendering":false,"apiRoutes":false,"exporting":false}
+{"_e":"metro:config","_t":1787785224016,"serverRoot":"../../..","projectRoot":"../../..","exporting":false,"flags":{"autolinkingModuleResolution":false,"serverActions":false,"serverComponents":false,"reactCompiler":false,"optimizeGraph":false,"treeshaking":false,"logbox":false}}
+{"_e":"expo:dev-tools-plugin:load","_t":1787785224142,"plugins":[]}
+{"_e":"metro:instantiate","_t":1787785224771,"atlas":false,"workers":6,"host":"::","port":8081}
+{"_e":"metro:bundling:started","_t":1787785293469,"id":"1","platform":"web","environment":null,"entry":"index.ts"}
+{"_e":"metro:bundling:done","_t":1787785293911,"id":"1","total":530,"ms":441.829875}
+{"_e":"metro:client_log","_t":1787785294144,"level":"warn","data":["\"shadow*\" style props are deprecated. Use \"boxShadow\"."]}
+{"_e":"metro:client_log","_t":1787785294146,"level":"log","data":["Running application \"main\" with appParams:\n","{\"hydrate\": undefined, \"rootTag\": \"#root\"}","\nDevelopment-level warnings: ON.\nPerformance optimizations: OFF."]}
+{"_e":"metro:client_log","_t":1787785385388,"level":"warn","data":["props.pointerEvents is deprecated. Use style.pointerEvents"]}
+{"_e":"metro:client_log","_t":1787785426548,"level":"error","data":["Failed to create creator profile:","{\"code\": \"42501\", \"details\": null, \"hint\": null, \"message\": \"new row violates row-level security policy for table \\\"creator_profiles\\\"\"}","captureCurrentStack@http://localhost:8081/index.ts.bundle:1548:29\naddErrorStacks@http://localhost:8081/index.ts.bundle:1530:40\n@http://localhost:8081/index.ts.bundle:1495:72\n@http://localhost:8081/index.ts.bundle:100063:42"]}
+{"_e":"metro:client_log","_t":1787785434761,"level":"error","data":["Failed to create creator profile:","{\"code\": \"42501\", \"details\": null, \"hint\": null, \"message\": \"new row violates row-level security policy for table \\\"creator_profiles\\\"\"}","captureCurrentStack@http://localhost:8081/index.ts.bundle:1548:29\naddErrorStacks@http://localhost:8081/index.ts.bundle:1530:40\n@http://localhost:8081/index.ts.bundle:1495:72\n@http://localhost:8081/index.ts.bundle:100063:42"]}
+{"_e":"metro:bundling:started","_t":1787786587080,"id":"7","platform":"web","environment":null,"entry":"index.ts"}
+{"_e":"metro:bundling:done","_t":1787786587951,"id":"7","total":656,"ms":870.571666}
+{"_e":"metro:bundling:started","_t":1787786945158,"id":"8","platform":"web","environment":null,"entry":"index.ts"}
+{"_e":"metro:bundling:done","_t":1787786945243,"id":"8","total":1,"ms":83.446125}
+{"_e":"metro:client_log","_t":1787786945476,"level":"warn","data":["\"shadow*\" style props are deprecated. Use \"boxShadow\"."]}
+{"_e":"metro:client_log","_t":1787786945476,"level":"log","data":["Running application \"main\" with appParams:\n","{\"hydrate\": undefined, \"rootTag\": \"#root\"}","\nDevelopment-level warnings: ON.\nPerformance optimizations: OFF."]}
+{"_e":"metro:client_log","_t":1787786946401,"level":"warn","data":["props.pointerEvents is deprecated. Use style.pointerEvents"]}
+{"_e":"metro:bundling:started","_t":1787787161950,"id":"e","platform":"web","environment":null,"entry":"index.ts"}
+{"_e":"metro:bundling:done","_t":1787787162030,"id":"e","total":1,"ms":80.074125}
+{"_e":"metro:bundling:started","_t":1787787907416,"id":"f","platform":"web","environment":null,"entry":"index.ts"}
+{"_e":"metro:bundling:done","_t":1787787907459,"id":"f","total":1,"ms":41.702084}
+{"_e":"metro:client_log","_t":1787787907687,"level":"warn","data":["\"shadow*\" style props are deprecated. Use \"boxShadow\"."]}
+{"_e":"metro:client_log","_t":1787787907688,"level":"log","data":["Running application \"main\" with appParams:\n","{\"hydrate\": undefined, \"rootTag\": \"#root\"}","\nDevelopment-level warnings: ON.\nPerformance optimizations: OFF."]}
+{"_e":"metro:client_log","_t":1787787907913,"level":"warn","data":["props.pointerEvents is deprecated. Use style.pointerEvents"]}
+{"_e":"metro:client_log","_t":1787787910551,"level":"warn","data":["\"shadow*\" style props are deprecated. Use \"boxShadow\"."]}
+{"_e":"metro:client_log","_t":1787787910552,"level":"log","data":["Running application \"main\" with appParams:\n","{\"hydrate\": undefined, \"rootTag\": \"#root\"}","\nDevelopment-level warnings: ON.\nPerformance optimizations: OFF."]}
+{"_e":"metro:client_log","_t":1787787910810,"level":"warn","data":["props.pointerEvents is deprecated. Use style.pointerEvents"]}
+{"_e":"metro:bundling:started","_t":1787789066914,"id":"m","platform":"web","environment":null,"entry":"index.ts"}
+{"_e":"metro:bundling:done","_t":1787789067000,"id":"m","total":1,"ms":81.166292}
+{"_e":"metro:client_log","_t":1787789067218,"level":"warn","data":["\"shadow*\" style props are deprecated. Use \"boxShadow\"."]}
+{"_e":"metro:client_log","_t":1787789067220,"level":"log","data":["Running application \"main\" with appParams:\n","{\"hydrate\": undefined, \"rootTag\": \"#root\"}","\nDevelopment-level warnings: ON.\nPerformance optimizations: OFF."]}
+{"_e":"metro:client_log","_t":1787789068335,"level":"warn","data":["props.pointerEvents is deprecated. Use style.pointerEvents"]}
+{"_e":"metro:bundling:started","_t":1787789407957,"id":"q","platform":"web","environment":null,"entry":"index.ts"}
+{"_e":"metro:bundling:done","_t":1787789408252,"id":"q","total":1,"ms":294.566334}
+{"_e":"metro:bundling:started","_t":1787789810978,"id":"r","platform":"web","environment":null,"entry":"index.ts"}
+{"_e":"metro:bundling:done","_t":1787789811160,"id":"r","total":1,"ms":182.074042}
