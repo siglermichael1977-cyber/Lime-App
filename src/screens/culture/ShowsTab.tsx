@@ -20,7 +20,7 @@ const CARIBBEAN_ENTERTAINMENT: Show[] = [
     country: 'USA/Caribbean Themes',
     description: 'Series exploring Caribbean and African diaspora themes',
     image: '🎬',
-    streamingLinks: [{ platform: 'HBO Max', url: 'https://www.hbomax.com' }],
+    streamingLinks: [],
   },
   {
     id: '2',
@@ -29,7 +29,7 @@ const CARIBBEAN_ENTERTAINMENT: Show[] = [
     country: 'USA/Caribbean Cast',
     description: 'Features Caribbean and Latin American characters',
     image: '🎭',
-    streamingLinks: [{ platform: 'Netflix', url: 'https://www.netflix.com' }],
+    streamingLinks: [],
   },
   {
     id: '3',
@@ -38,7 +38,7 @@ const CARIBBEAN_ENTERTAINMENT: Show[] = [
     country: 'Caribbean',
     description: 'Historical fiction set in the Caribbean',
     image: '🏴‍☠️',
-    streamingLinks: [{ platform: 'YouTube', url: 'https://www.youtube.com' }],
+    streamingLinks: [],
   },
   {
     id: '4',
@@ -47,7 +47,7 @@ const CARIBBEAN_ENTERTAINMENT: Show[] = [
     country: 'Caribbean',
     description: 'Reality series filmed across Caribbean islands',
     image: '🏝️',
-    streamingLinks: [{ platform: 'YouTube', url: 'https://www.youtube.com' }],
+    streamingLinks: [],
   },
   {
     id: '5',
@@ -56,10 +56,7 @@ const CARIBBEAN_ENTERTAINMENT: Show[] = [
     country: 'USA/Caribbean',
     description: 'Classic film featuring Caribbean music and culture',
     image: '🎵',
-    streamingLinks: [
-      { platform: 'Netflix', url: 'https://www.netflix.com' },
-      { platform: 'Amazon Prime', url: 'https://www.amazon.com/prime' },
-    ],
+    streamingLinks: [],
   },
   {
     id: '6',
@@ -68,7 +65,7 @@ const CARIBBEAN_ENTERTAINMENT: Show[] = [
     country: 'Jamaica',
     description: 'Documentary about Caribbean economics and tourism',
     image: '📽️',
-    streamingLinks: [{ platform: 'YouTube', url: 'https://www.youtube.com' }],
+    streamingLinks: [],
   },
   {
     id: '7',
@@ -77,7 +74,7 @@ const CARIBBEAN_ENTERTAINMENT: Show[] = [
     country: 'Jamaica',
     description: 'Documentary series on reggae legend Bob Marley',
     image: '🎸',
-    streamingLinks: [{ platform: 'YouTube', url: 'https://www.youtube.com' }],
+    streamingLinks: [],
   },
   {
     id: '8',
@@ -86,7 +83,7 @@ const CARIBBEAN_ENTERTAINMENT: Show[] = [
     country: 'Caribbean',
     description: 'Food and culture series exploring Caribbean cuisine',
     image: '🍳',
-    streamingLinks: [{ platform: 'YouTube', url: 'https://www.youtube.com' }],
+    streamingLinks: [],
   },
 ];
 
