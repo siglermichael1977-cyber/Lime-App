@@ -34,6 +34,12 @@
     "plugins": [
       "expo-asset"
     ],
-    "icon": "./assets/icon.png"
+    "icon": "./assets/icon.png",
+    "extra": {
+      "eas": {
+        "projectId": "8b3363dd-03aa-4bb1-9e2a-cc0f6d4ad82a"
+      }
+    },
+    "owner": "1-1-1-1mykke"
   }
 }
