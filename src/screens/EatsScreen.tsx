@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { View, Text, SectionList, TouchableOpacity, TextInput, Modal, Alert, StyleSheet, Platform } from 'react-native';
 import { supabase } from '../lib/supabase';
+import { requireAccount } from '../lib/guest';
 import { colors } from '../theme';
 import ScreenBackdrop from '../components/ScreenBackdrop';
 
@@ -66,7 +67,7 @@ export default function EatsScreen() {
         note: note.trim() || null,
       });
       if (error) throw error;
-      Alert.alert('Thanks!', "We'll take a look and add it soon.");
+      Alert.alert('Thanks!', 'We got your restaurant suggestion.');
       setShow(false); setName(''); setUrl(''); setNote('');
     } catch (e: any) {
       console.error('Failed to submit restaurant:', e);
@@ -91,7 +92,7 @@ export default function EatsScreen() {
         )}
         ListHeaderComponent={
           <View style={s.header}>
-            <Text style={s.sub}>Dishes from across the Caribbean. Restaurant menus coming soon.</Text>
+            <Text style={s.sub}>Dishes from across the Caribbean.</Text>
           </View>
         }
         contentContainerStyle={{ paddingBottom: 90 }}
@@ -99,7 +100,10 @@ export default function EatsScreen() {
       />
       {SUBMISSIONS_ENABLED && (
         <>
-          <TouchableOpacity style={s.fab} onPress={() => setShow(true)}>
+          <TouchableOpacity style={s.fab} onPress={async () => {
+            if (await requireAccount('submit a restaurant')) return;
+            setShow(true);
+          }}>
             <Text style={s.fabText}>+ Submit a restaurant</Text>
           </TouchableOpacity>
 

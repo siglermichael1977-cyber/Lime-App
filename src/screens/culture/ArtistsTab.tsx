@@ -21,8 +21,8 @@ const CARIBBEAN_ARTISTS: Artist[] = [
     bio: 'Reggae legend and cultural icon',
     icon: '👑',
     streamingLinks: [
-      { platform: 'Spotify', url: 'https://open.spotify.com' },
-      { platform: 'Apple Music', url: 'https://music.apple.com' },
+      { platform: 'Spotify', url: 'https://open.spotify.com/search/Bob%20Marley' },
+      { platform: 'Apple Music', url: 'https://music.apple.com/us/search?term=Bob%20Marley' },
     ],
   },
   {
@@ -33,9 +33,9 @@ const CARIBBEAN_ARTISTS: Artist[] = [
     bio: 'Dancehall pioneer with global hits',
     icon: '🎤',
     streamingLinks: [
-      { platform: 'Spotify', url: 'https://open.spotify.com' },
-      { platform: 'Apple Music', url: 'https://music.apple.com' },
-      { platform: 'YouTube Music', url: 'https://music.youtube.com' },
+      { platform: 'Spotify', url: 'https://open.spotify.com/search/Sean%20Paul' },
+      { platform: 'Apple Music', url: 'https://music.apple.com/us/search?term=Sean%20Paul' },
+      { platform: 'YouTube Music', url: 'https://music.youtube.com/search?q=Sean%20Paul' },
     ],
   },
   {
@@ -46,8 +46,8 @@ const CARIBBEAN_ARTISTS: Artist[] = [
     bio: 'Multi-platinum Caribbean icon',
     icon: '💎',
     streamingLinks: [
-      { platform: 'Spotify', url: 'https://open.spotify.com' },
-      { platform: 'Apple Music', url: 'https://music.apple.com' },
+      { platform: 'Spotify', url: 'https://open.spotify.com/search/Rihanna' },
+      { platform: 'Apple Music', url: 'https://music.apple.com/us/search?term=Rihanna' },
     ],
   },
   {
@@ -58,8 +58,8 @@ const CARIBBEAN_ARTISTS: Artist[] = [
     bio: 'Grammy-winning reggae artist',
     icon: '🎸',
     streamingLinks: [
-      { platform: 'Spotify', url: 'https://open.spotify.com' },
-      { platform: 'Apple Music', url: 'https://music.apple.com' },
+      { platform: 'Spotify', url: 'https://open.spotify.com/search/Shaggy' },
+      { platform: 'Apple Music', url: 'https://music.apple.com/us/search?term=Shaggy' },
     ],
   },
   {
@@ -70,8 +70,8 @@ const CARIBBEAN_ARTISTS: Artist[] = [
     bio: 'Modern reggae roots ambassador',
     icon: '🔥',
     streamingLinks: [
-      { platform: 'Spotify', url: 'https://open.spotify.com' },
-      { platform: 'Apple Music', url: 'https://music.apple.com' },
+      { platform: 'Spotify', url: 'https://open.spotify.com/search/Chronixx' },
+      { platform: 'Apple Music', url: 'https://music.apple.com/us/search?term=Chronixx' },
     ],
   },
   {
@@ -82,8 +82,8 @@ const CARIBBEAN_ARTISTS: Artist[] = [
     bio: 'King of the Dancehall',
     icon: '👸',
     streamingLinks: [
-      { platform: 'Spotify', url: 'https://open.spotify.com' },
-      { platform: 'Apple Music', url: 'https://music.apple.com' },
+      { platform: 'Spotify', url: 'https://open.spotify.com/search/Beenie%20Man' },
+      { platform: 'Apple Music', url: 'https://music.apple.com/us/search?term=Beenie%20Man' },
     ],
   },
   {
@@ -94,8 +94,8 @@ const CARIBBEAN_ARTISTS: Artist[] = [
     bio: 'Soca superstar and innovator',
     icon: '🎊',
     streamingLinks: [
-      { platform: 'Spotify', url: 'https://open.spotify.com' },
-      { platform: 'Apple Music', url: 'https://music.apple.com' },
+      { platform: 'Spotify', url: 'https://open.spotify.com/search/Machel%20Montano' },
+      { platform: 'Apple Music', url: 'https://music.apple.com/us/search?term=Machel%20Montano' },
     ],
   },
   {
@@ -106,8 +106,8 @@ const CARIBBEAN_ARTISTS: Artist[] = [
     bio: 'Bob Marley\'s son, reggae artist',
     icon: '🌿',
     streamingLinks: [
-      { platform: 'Spotify', url: 'https://open.spotify.com' },
-      { platform: 'Apple Music', url: 'https://music.apple.com' },
+      { platform: 'Spotify', url: 'https://open.spotify.com/search/Ky-Mani%20Marley' },
+      { platform: 'Apple Music', url: 'https://music.apple.com/us/search?term=Ky-Mani%20Marley' },
     ],
   },
   {
@@ -118,20 +118,8 @@ const CARIBBEAN_ARTISTS: Artist[] = [
     bio: 'Modern dancehall sensation',
     icon: '🎵',
     streamingLinks: [
-      { platform: 'Spotify', url: 'https://open.spotify.com' },
-      { platform: 'Apple Music', url: 'https://music.apple.com' },
-    ],
-  },
-  {
-    id: '10',
-    name: 'Buika',
-    genre: 'Flamenco/Caribbean Fusion',
-    country: 'Spain/Caribbean',
-    bio: 'Caribbean-influenced flamenco artist',
-    icon: '💃',
-    streamingLinks: [
-      { platform: 'Spotify', url: 'https://open.spotify.com' },
-      { platform: 'Apple Music', url: 'https://music.apple.com' },
+      { platform: 'Spotify', url: 'https://open.spotify.com/search/Popcaan' },
+      { platform: 'Apple Music', url: 'https://music.apple.com/us/search?term=Popcaan' },
     ],
   },
 ];

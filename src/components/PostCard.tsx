@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { View, Text, Image, TextInput, TouchableOpacity, Alert, Modal, StyleSheet, Share, Platform } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
 import { supabase } from '../lib/supabase';
+import { requireAccount } from '../lib/guest';
 import { colors, islandColor } from '../theme';
 import { Post } from '../lib/types';
 import Avatar from './Avatar';
@@ -30,6 +31,7 @@ export default function PostCard({ post, myId, onChanged }: {
   const [editBusy, setEditBusy] = useState(false);
 
   const toggleLike = async () => {
+    if (await requireAccount('like posts')) return;
     if (liked) {
       await supabase.from('post_likes').delete().match({ post_id: post.id, user_id: myId });
     } else {
@@ -48,22 +50,35 @@ export default function PostCard({ post, myId, onChanged }: {
     openExternal(whatsappShareUrl(`${author?.display_name} on LIME 🌴\n\n${post.body}`));
   };
 
-  const report = () => {
+  const report = async () => {
+    if (await requireAccount('report posts or block users')) return;
     Alert.alert('Report this post?', 'Our moderation team will review it.', [
       { text: 'Cancel', style: 'cancel' },
       {
         text: 'Report', style: 'destructive',
         onPress: async () => {
-          await supabase.from('reports').insert({
+          const { error } = await supabase.from('reports').insert({
             reporter_id: myId, content_type: 'post', content_id: post.id, reason: 'user_report',
           });
+          if (error) {
+            console.error('Failed to report post:', error);
+            Alert.alert('Something went wrong', error.message);
+            return;
+          }
           Alert.alert('Reported', 'Thanks — we will review it.');
         },
       },
       {
         text: 'Block user', style: 'destructive',
         onPress: async () => {
-          await supabase.from('blocked_users').insert({ blocker_id: myId, blocked_id: post.author_id });
+          const { error } = await supabase.from('blocked_users')
+            .upsert({ blocker_id: myId, blocked_id: post.author_id });
+          if (error) {
+            console.error('Failed to block user:', error);
+            Alert.alert('Something went wrong', error.message);
+            return;
+          }
+          Alert.alert('Blocked', `You won't see posts from ${author?.display_name ?? 'this user'} anymore.`);
           onChanged();
         },
       },

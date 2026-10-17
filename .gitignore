@@ -1,2 +1,6 @@
 # Local Netlify folder
 .netlify
+
+# Native folders are generated from app.json at build time
+/ios
+/android

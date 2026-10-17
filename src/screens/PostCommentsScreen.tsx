@@ -2,6 +2,7 @@ import React, { useCallback, useState } from 'react';
 import { View, Text, FlatList, TextInput, TouchableOpacity, Alert, StyleSheet, KeyboardAvoidingView, Platform } from 'react-native';
 import { useFocusEffect, useRoute } from '@react-navigation/native';
 import { supabase } from '../lib/supabase';
+import { requireAccount } from '../lib/guest';
 import { colors, islandColor } from '../theme';
 import ScreenBackdrop from '../components/ScreenBackdrop';
 import Avatar from '../components/Avatar';
@@ -46,6 +47,7 @@ export default function PostCommentsScreen() {
 
   const submit = async () => {
     if (!body.trim()) return;
+    if (await requireAccount('comment')) return;
     setBusy(true);
     try {
       const { data: { user } } = await supabase.auth.getUser();

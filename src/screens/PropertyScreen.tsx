@@ -2,6 +2,7 @@ import React, { useCallback, useState } from 'react';
 import { View, Text, FlatList, TouchableOpacity, Image, Alert, StyleSheet, Linking, Platform } from 'react-native';
 import { useFocusEffect, useNavigation } from '@react-navigation/native';
 import { supabase } from '../lib/supabase';
+import { requireAccount } from '../lib/guest';
 import { colors, ISLANDS } from '../theme';
 import { PropertyListing } from '../lib/types';
 import ScreenBackdrop from '../components/ScreenBackdrop';
@@ -136,7 +137,10 @@ export default function PropertyScreen() {
         ListEmptyComponent={<Text style={s.empty}>No listings yet — post the first one. 🏡</Text>}
         contentContainerStyle={{ paddingBottom: 90 }}
       />
-      <TouchableOpacity style={s.fab} onPress={() => nav.navigate('PropertyCompose')}>
+      <TouchableOpacity style={s.fab} onPress={async () => {
+        if (await requireAccount('post a listing')) return;
+        nav.navigate('PropertyCompose');
+      }}>
         <Text style={s.fabText}>+ Post a listing</Text>
       </TouchableOpacity>
     </View>

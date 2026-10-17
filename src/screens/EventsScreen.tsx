@@ -2,6 +2,7 @@ import React, { useCallback, useState } from 'react';
 import { View, Text, FlatList, TouchableOpacity, TextInput, Alert, Modal, StyleSheet, Platform } from 'react-native';
 import { useFocusEffect } from '@react-navigation/native';
 import { supabase } from '../lib/supabase';
+import { requireAccount } from '../lib/guest';
 import { colors } from '../theme';
 import { EventRow } from '../lib/types';
 import ScreenBackdrop from '../components/ScreenBackdrop';
@@ -26,6 +27,7 @@ export default function EventsScreen() {
   useFocusEffect(useCallback(() => { load(); }, [load]));
 
   const toggleRsvp = async (ev: EventRow) => {
+    if (await requireAccount('RSVP')) return;
     const going = ev.event_rsvps?.some(r => r.user_id === myId);
     if (going) await supabase.from('event_rsvps').delete().match({ event_id: ev.id, user_id: myId });
     else await supabase.from('event_rsvps').insert({ event_id: ev.id, user_id: myId });
@@ -75,7 +77,10 @@ export default function EventsScreen() {
         ListEmptyComponent={<Text style={s.empty}>No linkups posted yet — host the first one. 🎉</Text>}
         contentContainerStyle={{ paddingBottom: 90 }}
       />
-      <TouchableOpacity style={s.fab} onPress={() => setShowForm(true)}>
+      <TouchableOpacity style={s.fab} onPress={async () => {
+        if (await requireAccount('host a linkup')) return;
+        setShowForm(true);
+      }}>
         <Text style={s.fabText}>+ Host a linkup</Text>
       </TouchableOpacity>
 

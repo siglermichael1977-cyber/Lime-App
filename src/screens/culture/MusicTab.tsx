@@ -2,6 +2,7 @@ import React, { useCallback, useState } from 'react';
 import { View, Text, FlatList, TouchableOpacity, TextInput, Modal, Alert, StyleSheet, Platform } from 'react-native';
 import { useFocusEffect } from '@react-navigation/native';
 import { supabase } from '../../lib/supabase';
+import { requireAccount } from '../../lib/guest';
 import { colors, islandColor } from '../../theme';
 import { CultureMusic } from '../../lib/types';
 import { openExternal } from '../../lib/openExternal';
@@ -101,7 +102,10 @@ export default function MusicTab() {
         ListEmptyComponent={<Text style={s.empty}>No music shared yet — be the first. 🎵</Text>}
         contentContainerStyle={{ paddingBottom: 90, paddingTop: 6 }}
       />
-      <TouchableOpacity style={s.fab} onPress={() => setShow(true)}>
+      <TouchableOpacity style={s.fab} onPress={async () => {
+        if (await requireAccount('share music')) return;
+        setShow(true);
+      }}>
         <Text style={s.fabText}>+ Share music</Text>
       </TouchableOpacity>
 

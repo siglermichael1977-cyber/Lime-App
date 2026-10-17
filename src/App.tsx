@@ -75,6 +75,8 @@ export default function App() {
 
   useEffect(() => {
     if (!session) { setHasProfile(null); return; }
+    // Guests browse without a profile, so they skip onboarding.
+    if (session.user.is_anonymous) { setHasProfile(true); return; }
     supabase.from('profiles').select('id').eq('id', session.user.id).maybeSingle()
       .then(({ data }) => setHasProfile(!!data));
   }, [session]);

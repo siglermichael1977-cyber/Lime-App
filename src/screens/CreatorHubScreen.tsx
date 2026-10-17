@@ -2,6 +2,7 @@ import React, { useCallback, useState } from 'react';
 import { View, Text, TouchableOpacity, ScrollView, Alert, StyleSheet, Image, ActivityIndicator } from 'react-native';
 import { useFocusEffect } from '@react-navigation/native';
 import { supabase } from '../lib/supabase';
+import { requireAccount } from '../lib/guest';
 import { colors } from '../theme';
 import ScreenBackdrop from '../components/ScreenBackdrop';
 import Avatar from '../components/Avatar';
@@ -78,6 +79,7 @@ export default function CreatorHubScreen() {
 
   const handleFollow = async (creatorId: string, isFollowing: boolean) => {
     if (!currentUserId) return;
+    if (await requireAccount('follow creators')) return;
 
     try {
       if (isFollowing) {

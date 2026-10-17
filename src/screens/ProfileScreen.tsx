@@ -19,6 +19,7 @@ export default function ProfileScreen() {
   const [bioBusy, setBioBusy] = useState(false);
   const [isCreator, setIsCreator] = useState(false);
   const [creatorBusy, setCreatorBusy] = useState(false);
+  const [guest, setGuest] = useState(false);
 
   const changePhoto = async () => {
     if (!me) return;
@@ -99,6 +100,8 @@ export default function ProfileScreen() {
   useFocusEffect(useCallback(() => {
     supabase.auth.getUser().then(async ({ data: { user } }) => {
       if (!user) return;
+      setGuest(user.is_anonymous ?? false);
+      if (user.is_anonymous) return;
       const { data } = await supabase.from('profiles').select('*').eq('id', user.id).single();
       if (data) {
         setMe(data);
@@ -109,10 +112,51 @@ export default function ProfileScreen() {
 
   const deleteAccount = () => {
     Alert.alert(
-      'Coming soon',
-      "Account deletion isn't available yet — we're still building it. Email mykkesigler@icloud.com if you need your account removed in the meantime.",
+      'Delete your account?',
+      'This permanently removes your profile, posts, and family tree. This cannot be undone.',
+      [
+        { text: 'Cancel', style: 'cancel' },
+        {
+          text: 'Delete', style: 'destructive',
+          onPress: async () => {
+            // The function deletes whoever the session token belongs to.
+            const { error } = await supabase.functions.invoke('delete-account');
+            if (error) {
+              console.error('Failed to delete account:', error);
+              Alert.alert('Something went wrong', 'Your account could not be deleted. Please try again.');
+              return;
+            }
+            // The user is gone server-side, so only clear the local session.
+            await supabase.auth.signOut({ scope: 'local' });
+          },
+        },
+      ],
     );
   };
+
+  // Guests have no profile row; give them a way to sign up or leave.
+  if (guest) {
+    return (
+      <View style={s.wrap}>
+        <ScreenBackdrop />
+        <Text style={s.name}>Guest</Text>
+        <Text style={s.username}>Browsing without an account</Text>
+        <View style={s.links}>
+          <TouchableOpacity style={s.row} onPress={() => supabase.auth.signOut()}>
+            <Text style={s.rowText}>Create an account or sign in</Text>
+          </TouchableOpacity>
+          <TouchableOpacity style={s.row}
+            onPress={() => Linking.openURL('https://limeappfinal.netlify.app/privacy')}>
+            <Text style={s.rowText}>Privacy policy</Text>
+          </TouchableOpacity>
+          <TouchableOpacity style={s.row}
+            onPress={() => Linking.openURL('https://limeappfinal.netlify.app/terms')}>
+            <Text style={s.rowText}>Terms of service</Text>
+          </TouchableOpacity>
+        </View>
+      </View>
+    );
+  }
 
   if (!me) return <View style={s.wrap}><ScreenBackdrop /></View>;
 

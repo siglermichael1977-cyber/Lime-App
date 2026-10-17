@@ -37,6 +37,16 @@ export default function AuthScreen() {
     }
   };
 
+  const exploreAsGuest = async () => {
+    setBusy(true);
+    const { error } = await supabase.auth.signInAnonymously();
+    setBusy(false);
+    if (error) {
+      console.error('Guest sign in failed:', error);
+      Alert.alert('Something went wrong', error.message);
+    }
+  };
+
   return (
     <View style={s.root}>
       <CaribbeanBackdrop />
@@ -55,6 +65,9 @@ export default function AuthScreen() {
             <Text style={s.switch}>
               {mode === 'signup' ? 'Already a cousin? Sign in' : 'New here? Create account'}
             </Text>
+          </TouchableOpacity>
+          <TouchableOpacity onPress={exploreAsGuest} disabled={busy}>
+            <Text style={s.guest}>Explore as Guest</Text>
           </TouchableOpacity>
         </View>
       </KeyboardAvoidingView>
@@ -81,4 +94,5 @@ const s = StyleSheet.create({
     shadowColor: colors.hibiscus, shadowOpacity: 0.4, shadowRadius: 16, shadowOffset: { width: 0, height: 8 }, elevation: 6 },
   btnText: { color: '#fff', textAlign: 'center', fontWeight: '800', fontSize: 16 },
   switch: { color: colors.mango, textAlign: 'center', marginTop: 18, fontWeight: '700' },
+  guest: { color: '#EAF6F2', textAlign: 'center', marginTop: 14, fontWeight: '600', textDecorationLine: 'underline' },
 });

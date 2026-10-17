@@ -7,7 +7,7 @@ import ScreenBackdrop from '../components/ScreenBackdrop';
 const ITEMS = [
   { key: 'Wuk', icon: '💼', title: 'Wuk & Hustle', desc: 'Jobs, hustles, and more job sites to browse.' },
   { key: 'Roots', icon: '🌳', title: 'Roots DNA & Genealogy', desc: 'Your family tree, plus DNA services to trace it further.' },
-  { key: 'Eats', icon: '🍽️', title: 'Eats', desc: 'Caribbean dishes by island — menus coming soon.' },
+  { key: 'Eats', icon: '🍽️', title: 'Eats', desc: 'Caribbean dishes by island.' },
   { key: 'Study', icon: '🎓', title: 'Study', desc: 'College and scholarship portals around the world.' },
   { key: 'Culture', icon: '🎭', title: 'Culture', desc: 'Music, poems, stories, and Caribbean literature.' },
   { key: 'StayProperty', icon: '🏡', title: 'Stay & Property', desc: 'Land and houses to buy or rent, plus places to stay.' },

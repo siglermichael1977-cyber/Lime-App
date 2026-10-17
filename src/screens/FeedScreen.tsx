@@ -2,6 +2,7 @@ import React, { useCallback, useEffect, useState } from 'react';
 import { View, Text, FlatList, TouchableOpacity, RefreshControl, StyleSheet } from 'react-native';
 import { useNavigation, useFocusEffect } from '@react-navigation/native';
 import { supabase } from '../lib/supabase';
+import { requireAccount } from '../lib/guest';
 import { colors } from '../theme';
 import { Post, Profile } from '../lib/types';
 import PostCard from '../components/PostCard';
@@ -59,7 +60,10 @@ export default function FeedScreen() {
       <ScreenBackdrop />
       <View style={s.bar}>
         <Text style={s.logo}>LIME<Text style={{ color: colors.mango }}>.</Text></Text>
-        <TouchableOpacity style={s.compose} onPress={() => nav.navigate('Compose')}>
+        <TouchableOpacity style={s.compose} onPress={async () => {
+          if (await requireAccount('post')) return;
+          nav.navigate('Compose');
+        }}>
           <Text style={s.composeText}>＋ Post</Text>
         </TouchableOpacity>
       </View>

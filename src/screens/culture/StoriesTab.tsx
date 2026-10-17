@@ -2,6 +2,7 @@ import React, { useCallback, useState } from 'react';
 import { View, Text, FlatList, TouchableOpacity, TextInput, Modal, Alert, StyleSheet, Platform } from 'react-native';
 import { useFocusEffect } from '@react-navigation/native';
 import { supabase } from '../../lib/supabase';
+import { requireAccount } from '../../lib/guest';
 import { colors, islandColor } from '../../theme';
 import { CultureStory } from '../../lib/types';
 import { openExternal } from '../../lib/openExternal';
@@ -81,7 +82,10 @@ export default function StoriesTab() {
         ListEmptyComponent={<Text style={s.empty}>No stories shared yet — every family has one. 📖</Text>}
         contentContainerStyle={{ paddingBottom: 90, paddingTop: 6 }}
       />
-      <TouchableOpacity style={s.fab} onPress={() => setShow(true)}>
+      <TouchableOpacity style={s.fab} onPress={async () => {
+        if (await requireAccount('share a story')) return;
+        setShow(true);
+      }}>
         <Text style={s.fabText}>+ Share a story</Text>
       </TouchableOpacity>
 

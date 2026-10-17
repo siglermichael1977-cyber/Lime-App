@@ -2,6 +2,7 @@ import React, { useCallback, useState } from 'react';
 import { View, Text, FlatList, TouchableOpacity, TextInput, Modal, Alert, StyleSheet, Platform } from 'react-native';
 import { useFocusEffect } from '@react-navigation/native';
 import { supabase } from '../lib/supabase';
+import { requireAccount } from '../lib/guest';
 import { colors } from '../theme';
 import { FamilyMember } from '../lib/types';
 import { openExternal } from '../lib/openExternal';
@@ -94,7 +95,10 @@ export default function RootsScreen() {
         }
         contentContainerStyle={{ paddingBottom: 90 }}
       />
-      <TouchableOpacity style={s.fab} onPress={() => setShow(true)}>
+      <TouchableOpacity style={s.fab} onPress={async () => {
+        if (await requireAccount('build your family tree')) return;
+        setShow(true);
+      }}>
         <Text style={s.fabText}>+ Add relative</Text>
       </TouchableOpacity>
 

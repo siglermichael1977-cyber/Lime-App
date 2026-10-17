@@ -2,6 +2,7 @@ import React, { useCallback, useState } from 'react';
 import { View, Text, FlatList, TouchableOpacity, TextInput, Modal, Alert, StyleSheet, Platform } from 'react-native';
 import { useFocusEffect } from '@react-navigation/native';
 import { supabase } from '../../lib/supabase';
+import { requireAccount } from '../../lib/guest';
 import { colors, islandColor } from '../../theme';
 import { CulturePoem } from '../../lib/types';
 import { openExternal } from '../../lib/openExternal';
@@ -77,7 +78,10 @@ export default function PoemsTab() {
         ListEmptyComponent={<Text style={s.empty}>No poems shared yet — de mic waiting. 📜</Text>}
         contentContainerStyle={{ paddingBottom: 90, paddingTop: 6 }}
       />
-      <TouchableOpacity style={s.fab} onPress={() => setShow(true)}>
+      <TouchableOpacity style={s.fab} onPress={async () => {
+        if (await requireAccount('share a poem')) return;
+        setShow(true);
+      }}>
         <Text style={s.fabText}>+ Share a poem</Text>
       </TouchableOpacity>
 
