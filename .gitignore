@@ -4,3 +4,8 @@
 # Native folders are generated from app.json at build time
 /ios
 /android
+
+# Xcode build output generated inside node_modules
+node_modules/expo-modules-jsi/apple/.DerivedData/
+node_modules/expo-modules-jsi/apple/.generated/
+node_modules/expo-modules-jsi/apple/Products/
