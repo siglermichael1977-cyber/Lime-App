@@ -7,6 +7,7 @@ import { colors, ISLANDS } from '../theme';
 import ScreenBackdrop from '../components/ScreenBackdrop';
 import { normalizeToJpegUri } from '../lib/heicToJpeg';
 import { compressImage } from '../lib/imageUpload';
+import { blockIfObjectionable } from '../lib/contentFilter';
 
 const MAX_PHOTOS = 5;
 
@@ -64,6 +65,7 @@ export default function PropertyComposeScreen() {
       Alert.alert('Almost there', 'Add at least one way for people to reach you (phone, WhatsApp, or email).');
       return;
     }
+    if (blockIfObjectionable(location, price, description)) return;
     submittingRef.current = true;
     setBusy(true);
     try {

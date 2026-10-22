@@ -9,6 +9,7 @@ import ScreenBackdrop from '../components/ScreenBackdrop';
 import { normalizeToJpegUri } from '../lib/heicToJpeg';
 import { compressImage } from '../lib/imageUpload';
 import { fixElementWithColor } from '../lib/webFormFix';
+import { blockIfObjectionable } from '../lib/contentFilter';
 
 const TAGS = ['food', 'music'];
 const MAX_VIDEO_DURATION_SEC = 300;
@@ -129,6 +130,7 @@ export default function ComposeScreen() {
   const submit = async () => {
     if (submittingRef.current) return;
     if (!body.trim()) { Alert.alert('Write something first 🙂'); return; }
+    if (blockIfObjectionable(body)) return;
     submittingRef.current = true;
     setBusy(true);
     try {

@@ -3,6 +3,7 @@ import { View, Text, FlatList, TouchableOpacity, Image, Alert, StyleSheet, Linki
 import { useFocusEffect, useNavigation } from '@react-navigation/native';
 import { supabase } from '../lib/supabase';
 import { requireAccount } from '../lib/guest';
+import { fetchBlockedIds, openReportBlockMenu } from '../lib/moderation';
 import { colors, ISLANDS } from '../theme';
 import { PropertyListing } from '../lib/types';
 import ScreenBackdrop from '../components/ScreenBackdrop';
@@ -40,7 +41,8 @@ export default function PropertyScreen() {
     if (islandFilter) q = q.eq('island', islandFilter);
     const { data, error } = await q;
     if (error) { console.error('Failed to load listings:', error); return; }
-    setListings(data ?? []);
+    const blocked = await fetchBlockedIds();
+    setListings((data ?? []).filter(l => !blocked.has(l.author_id)));
   }, [txFilter, islandFilter]);
   useFocusEffect(useCallback(() => { load(); }, [load]));
 
@@ -125,9 +127,16 @@ export default function PropertyScreen() {
                     <Text style={s.contactBtnText}>✉️ Email</Text>
                   </TouchableOpacity>
                 )}
-                {item.author_id === myId && (
+                {item.author_id === myId ? (
                   <TouchableOpacity style={[s.contactBtn, { marginLeft: 'auto' }]} onPress={() => confirmDelete(item)}>
                     <Text style={s.contactBtnText}>🗑️</Text>
+                  </TouchableOpacity>
+                ) : (
+                  <TouchableOpacity style={{ marginLeft: 'auto' }} hitSlop={10} onPress={() => openReportBlockMenu({
+                    contentType: 'property_listing', contentId: item.id, authorId: item.author_id,
+                    authorName: item.profiles?.display_name, onBlocked: load,
+                  })}>
+                    <Text style={s.more}>⋯</Text>
                   </TouchableOpacity>
                 )}
               </View>
@@ -170,6 +179,7 @@ const s = StyleSheet.create({
   poster: { fontSize: 11, color: colors.muted, marginTop: 8 },
   contactRow: { flexDirection: 'row', gap: 8, marginTop: 10, flexWrap: 'wrap', alignItems: 'center' },
   contactBtn: { backgroundColor: colors.sea, borderRadius: 999, paddingVertical: 7, paddingHorizontal: 13 },
+  more: { fontSize: 18, fontWeight: '700', color: '#41615B', paddingHorizontal: 4 },
   contactBtnText: { color: '#fff', fontWeight: '700', fontSize: 11.5 },
   empty: { textAlign: 'center', color: colors.muted, marginTop: 40, paddingHorizontal: 40, lineHeight: 20 },
   fab: { position: 'absolute', bottom: Platform.OS === 'web' ? 90 : 20, alignSelf: 'center', backgroundColor: colors.hibiscus,

@@ -11,6 +11,8 @@ import { openExternal } from '../lib/openExternal';
 import { instagramUrl, facebookUrl, tiktokUrl, xUrl, whatsappUrl } from '../lib/socialLinks';
 import { leaveGuest } from '../lib/guest';
 
+const CONTACT_URL = 'mailto:mykkesigler@icloud.com';
+
 export default function ProfileScreen() {
   const [me, setMe] = useState<Profile | null>(null);
   const [avatarBusy, setAvatarBusy] = useState(false);
@@ -152,6 +154,9 @@ export default function ProfileScreen() {
           <Text style={s.guestSecondaryText}>Sign in</Text>
         </TouchableOpacity>
         <View style={s.links}>
+          <TouchableOpacity style={s.row} onPress={() => Linking.openURL(CONTACT_URL)}>
+            <Text style={s.rowText}>Contact us</Text>
+          </TouchableOpacity>
           <TouchableOpacity style={s.row}
             onPress={() => Linking.openURL('https://limeappfinal.netlify.app/privacy')}>
             <Text style={s.rowText}>Privacy policy</Text>
@@ -299,6 +304,9 @@ export default function ProfileScreen() {
       <View style={s.links}>
         <TouchableOpacity style={s.row} onPress={() => supabase.auth.signOut()}>
           <Text style={s.rowText}>Sign out</Text>
+        </TouchableOpacity>
+        <TouchableOpacity style={s.row} onPress={() => Linking.openURL(CONTACT_URL)}>
+          <Text style={s.rowText}>Contact us</Text>
         </TouchableOpacity>
         <TouchableOpacity style={s.row}
           onPress={() => Linking.openURL('https://limeappfinal.netlify.app/privacy')}>

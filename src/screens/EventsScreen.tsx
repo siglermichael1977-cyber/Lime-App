@@ -3,6 +3,8 @@ import { View, Text, FlatList, TouchableOpacity, TextInput, Alert, Modal, StyleS
 import { useFocusEffect } from '@react-navigation/native';
 import { supabase } from '../lib/supabase';
 import { requireAccount } from '../lib/guest';
+import { fetchBlockedIds, openReportBlockMenu } from '../lib/moderation';
+import { blockIfObjectionable } from '../lib/contentFilter';
 import { colors } from '../theme';
 import { EventRow } from '../lib/types';
 import ScreenBackdrop from '../components/ScreenBackdrop';
@@ -22,7 +24,8 @@ export default function EventsScreen() {
       .select('*, event_rsvps(user_id)')
       .gte('starts_at', new Date().toISOString())
       .order('starts_at');
-    setEvents(data ?? []);
+    const blocked = await fetchBlockedIds();
+    setEvents((data ?? []).filter(e => !blocked.has(e.host_id)));
   }, []);
   useFocusEffect(useCallback(() => { load(); }, [load]));
 
@@ -38,6 +41,7 @@ export default function EventsScreen() {
     if (!title || !city || !when) { Alert.alert('Fill in the lime, the city, and the date'); return; }
     const starts = new Date(when);
     if (isNaN(+starts)) { Alert.alert('Date format', 'Use YYYY-MM-DD (e.g. 2026-08-15)'); return; }
+    if (blockIfObjectionable(title, city)) return;
     const { error } = await supabase.from('events').insert({
       host_id: myId, title, city, starts_at: starts.toISOString(),
     });
@@ -71,6 +75,13 @@ export default function EventsScreen() {
                   {going ? '✓ Reaching' : 'I reaching'}
                 </Text>
               </TouchableOpacity>
+              {item.host_id !== myId && (
+                <TouchableOpacity hitSlop={10} onPress={() => openReportBlockMenu({
+                  contentType: 'event', contentId: item.id, authorId: item.host_id, onBlocked: load,
+                })}>
+                  <Text style={s.more}>⋯</Text>
+                </TouchableOpacity>
+              )}
             </View>
           );
         }}
@@ -123,6 +134,7 @@ const s = StyleSheet.create({
   meta: { fontSize: 11.5, color: colors.muted, marginTop: 2 },
   rsvp: { borderWidth: 1.5, borderColor: colors.sea, borderRadius: 999, paddingVertical: 7, paddingHorizontal: 12 },
   rsvpOn: { backgroundColor: colors.sea },
+  more: { fontSize: 16, fontWeight: '700', color: '#41615B' },
   rsvpText: { fontSize: 11, fontWeight: '700', color: colors.seaDeep },
   empty: { textAlign: 'center', color: colors.muted, marginTop: 40 },
   fab: { position: 'absolute', bottom: Platform.OS === 'web' ? 90 : 20, alignSelf: 'center', backgroundColor: colors.hibiscus,

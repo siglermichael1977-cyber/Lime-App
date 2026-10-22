@@ -3,6 +3,8 @@ import { View, Text, FlatList, TouchableOpacity, TextInput, Modal, Alert, StyleS
 import { useFocusEffect } from '@react-navigation/native';
 import { supabase } from '../../lib/supabase';
 import { requireAccount } from '../../lib/guest';
+import { fetchBlockedIds, openReportBlockMenu } from '../../lib/moderation';
+import { blockIfObjectionable } from '../../lib/contentFilter';
 import { colors, islandColor } from '../../theme';
 import { CultureStory } from '../../lib/types';
 import { openExternal } from '../../lib/openExternal';
@@ -15,14 +17,18 @@ export default function StoriesTab() {
   const [body, setBody] = useState('');
   const [externalUrl, setExternalUrl] = useState('');
   const [busy, setBusy] = useState(false);
+  const [myId, setMyId] = useState('');
 
   const load = useCallback(async () => {
+    const { data: { user } } = await supabase.auth.getUser();
+    if (user) setMyId(user.id);
     const { data, error } = await supabase.from('culture_stories')
       .select('*, profiles!culture_stories_author_id_fkey(*)')
       .order('created_at', { ascending: false })
       .limit(50);
     if (error) { console.error('Failed to load stories:', error); return; }
-    setStories(data ?? []);
+    const blocked = await fetchBlockedIds();
+    setStories((data ?? []).filter(st => !blocked.has(st.author_id)));
   }, []);
   useFocusEffect(useCallback(() => { load(); }, [load]));
 
@@ -35,6 +41,7 @@ export default function StoriesTab() {
       Alert.alert('Almost there', 'Write your story, or paste a link to it.');
       return;
     }
+    if (blockIfObjectionable(title, body, externalUrl)) return;
     setBusy(true);
     try {
       const { data: { user } } = await supabase.auth.getUser();
@@ -69,6 +76,14 @@ export default function StoriesTab() {
                 <Text style={s.author}>{item.profiles?.display_name ?? 'Cousin'}</Text>
                 <Text style={s.meta}>{item.profiles?.island}</Text>
               </View>
+              {item.author_id !== myId && (
+                <TouchableOpacity hitSlop={10} onPress={() => openReportBlockMenu({
+                  contentType: 'story', contentId: item.id, authorId: item.author_id,
+                  authorName: item.profiles?.display_name, onBlocked: load,
+                })}>
+                  <Text style={s.more}>⋯</Text>
+                </TouchableOpacity>
+              )}
             </View>
             <Text style={s.title}>{item.title}</Text>
             {item.body && <Text style={s.body}>{item.body}</Text>}
@@ -120,6 +135,7 @@ const s = StyleSheet.create({
     shadowColor: colors.seaDeep, shadowOpacity: 0.08, shadowRadius: 10, shadowOffset: { width: 0, height: 4 }, elevation: 2 },
   head: { flexDirection: 'row', alignItems: 'center', gap: 8, marginBottom: 8 },
   author: { fontWeight: '700', fontSize: 13, color: colors.ink },
+  more: { fontSize: 16, fontWeight: '700', color: '#41615B' },
   meta: { fontSize: 11, color: colors.muted },
   title: { fontWeight: '800', fontSize: 15, color: colors.seaDeep, marginBottom: 4 },
   body: { fontSize: 14, lineHeight: 21, color: colors.ink },

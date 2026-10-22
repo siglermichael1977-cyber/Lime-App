@@ -3,6 +3,7 @@ import { View, Text, FlatList, TouchableOpacity, RefreshControl, StyleSheet } fr
 import { useNavigation, useFocusEffect } from '@react-navigation/native';
 import { supabase } from '../lib/supabase';
 import { requireAccount } from '../lib/guest';
+import { fetchBlockedIds } from '../lib/moderation';
 import { colors } from '../theme';
 import { Post, Profile } from '../lib/types';
 import PostCard from '../components/PostCard';
@@ -44,7 +45,8 @@ export default function FeedScreen() {
       setPosts([]);
       return;
     }
-    setPosts(data ?? []);
+    const blocked = await fetchBlockedIds();
+    setPosts((data ?? []).filter(p => !blocked.has(p.author_id)));
   }, [filter]);
 
   // Compose always nav.goBack()s to here on success, which alone triggers this

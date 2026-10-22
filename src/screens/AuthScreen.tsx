@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { View, Text, TextInput, TouchableOpacity, Alert, StyleSheet, KeyboardAvoidingView, Platform } from 'react-native';
+import { View, Text, TextInput, TouchableOpacity, Alert, StyleSheet, KeyboardAvoidingView, Platform, Linking } from 'react-native';
 import { supabase } from '../lib/supabase';
 import { colors } from '../theme';
 import CaribbeanBackdrop from '../components/CaribbeanBackdrop';
@@ -10,12 +10,15 @@ export default function AuthScreen() {
   const [password, setPassword] = useState('');
   const [mode, setMode] = useState<'signin' | 'signup'>(takeAuthMode);
   const [busy, setBusy] = useState(false);
+  const [agreed, setAgreed] = useState(false);
+  const signupBlocked = mode === 'signup' && !agreed;
 
   const submit = async () => {
     if (!email || password.length < 8) {
       Alert.alert('Hold up', 'Enter your email and a password of at least 8 characters.');
       return;
     }
+    if (signupBlocked) return;
     setBusy(true);
     if (mode === 'signup') {
       const { data, error } = await supabase.auth.signUp({ email, password });
@@ -59,7 +62,22 @@ export default function AuthScreen() {
             autoCapitalize="none" keyboardType="email-address" value={email} onChangeText={setEmail} />
           <TextInput style={s.input} placeholder="Password (8+ characters)" placeholderTextColor="#EAF6F2"
             secureTextEntry value={password} onChangeText={setPassword} />
-          <TouchableOpacity style={s.btn} onPress={submit} disabled={busy}>
+          {mode === 'signup' && (
+            <TouchableOpacity style={s.agreeRow} onPress={() => setAgreed(!agreed)}
+              accessibilityRole="checkbox" accessibilityState={{ checked: agreed }}>
+              <View style={[s.checkbox, agreed && s.checkboxOn]}>
+                {agreed && <Text style={s.checkmark}>✓</Text>}
+              </View>
+              <Text style={s.agreeText}>
+                I agree to the{' '}
+                <Text style={s.agreeLink} onPress={() => Linking.openURL('https://limeappfinal.netlify.app/terms')}>
+                  Terms of Use
+                </Text>
+                . LIME has zero tolerance for objectionable content or abusive users.
+              </Text>
+            </TouchableOpacity>
+          )}
+          <TouchableOpacity style={[s.btn, signupBlocked && s.btnDisabled]} onPress={submit} disabled={busy || signupBlocked}>
             <Text style={s.btnText}>{busy ? '…' : mode === 'signup' ? 'Join de yard' : 'Come back in'}</Text>
           </TouchableOpacity>
           <TouchableOpacity onPress={() => setMode(mode === 'signup' ? 'signin' : 'signup')}>
@@ -93,6 +111,14 @@ const s = StyleSheet.create({
     borderRadius: 16, padding: 15, color: '#fff', marginBottom: 12, fontSize: 15 },
   btn: { backgroundColor: colors.hibiscus, borderRadius: 999, padding: 16, marginTop: 8,
     shadowColor: colors.hibiscus, shadowOpacity: 0.4, shadowRadius: 16, shadowOffset: { width: 0, height: 8 }, elevation: 6 },
+  btnDisabled: { opacity: 0.45 },
+  agreeRow: { flexDirection: 'row', alignItems: 'flex-start', gap: 10, marginTop: 4, marginBottom: 6 },
+  checkbox: { width: 22, height: 22, borderRadius: 6, borderWidth: 1.5, borderColor: 'rgba(255,255,255,0.6)',
+    alignItems: 'center', justifyContent: 'center', marginTop: 1 },
+  checkboxOn: { backgroundColor: colors.mango, borderColor: colors.mango },
+  checkmark: { color: colors.seaDeep, fontWeight: '900', fontSize: 14 },
+  agreeText: { flex: 1, color: '#EAF6F2', fontSize: 13, lineHeight: 19 },
+  agreeLink: { color: colors.mango, fontWeight: '700', textDecorationLine: 'underline' },
   btnText: { color: '#fff', textAlign: 'center', fontWeight: '800', fontSize: 16 },
   switch: { color: colors.mango, textAlign: 'center', marginTop: 18, fontWeight: '700' },
   guest: { color: '#EAF6F2', textAlign: 'center', marginTop: 14, fontWeight: '600', textDecorationLine: 'underline' },

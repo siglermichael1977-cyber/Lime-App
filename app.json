@@ -20,7 +20,7 @@
       "infoPlist": {
         "NSPhotoLibraryUsageDescription": "LIME needs photo access so you can share pictures with the community."
       },
-      "buildNumber": "22"
+      "buildNumber": "23"
     },
     "android": {
       "package": "com.mykkesigler.lime",
@@ -32,7 +32,8 @@
       "bundler": "metro"
     },
     "plugins": [
-      "expo-asset"
+      "expo-asset",
+      "expo-video"
     ],
     "icon": "./assets/icon.png",
     "extra": {

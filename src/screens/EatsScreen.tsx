@@ -10,7 +10,7 @@ type IslandSection = { title: string; data: Dish[] };
 
 // TODO: restaurant_submissions insert keeps failing RLS in production despite a verified-correct
 // policy (auth.uid() = submitted_by) — cause not yet found. Hidden until that's root-caused.
-const SUBMISSIONS_ENABLED = true;
+const SUBMISSIONS_ENABLED = false;
 
 const DISHES: IslandSection[] = [
   { title: 'Jamaica', data: [

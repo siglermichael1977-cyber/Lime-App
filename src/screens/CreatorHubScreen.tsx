@@ -3,6 +3,7 @@ import { View, Text, TouchableOpacity, ScrollView, Alert, StyleSheet, Image, Act
 import { useFocusEffect } from '@react-navigation/native';
 import { supabase } from '../lib/supabase';
 import { requireAccount } from '../lib/guest';
+import { fetchBlockedIds, openReportBlockMenu } from '../lib/moderation';
 import { colors } from '../theme';
 import ScreenBackdrop from '../components/ScreenBackdrop';
 import Avatar from '../components/Avatar';
@@ -56,8 +57,9 @@ export default function CreatorHubScreen() {
         .eq('follower_id', user.id);
 
       const followingIds = new Set(followingData?.map(f => f.following_id) || []);
+      const blocked = await fetchBlockedIds();
 
-      const formattedCreators = (creatorData || []).map((cp: any) => ({
+      const formattedCreators = (creatorData || []).filter((cp: any) => !blocked.has(cp.profiles.id)).map((cp: any) => ({
         id: cp.profiles.id,
         display_name: cp.profiles.display_name,
         username: cp.profiles.username,
@@ -172,6 +174,14 @@ export default function CreatorHubScreen() {
                   <Text style={s.username}>@{creator.username}</Text>
                   <Text style={s.island}>🏝️ {creator.island}</Text>
                 </View>
+                {creator.id !== currentUserId && (
+                  <TouchableOpacity hitSlop={10} onPress={() => openReportBlockMenu({
+                    contentType: 'profile', contentId: creator.id, authorId: creator.id,
+                    authorName: creator.display_name, onBlocked: loadCreators,
+                  })}>
+                    <Text style={s.more}>⋯</Text>
+                  </TouchableOpacity>
+                )}
               </View>
 
               <Text style={s.bio}>{creator.bio}</Text>
@@ -239,6 +249,7 @@ const s = StyleSheet.create({
     gap: 12,
     marginBottom: 10,
   },
+  more: { fontSize: 18, fontWeight: '700', color: '#41615B' },
   creatorInfo: {
     flex: 1,
     justifyContent: 'center',

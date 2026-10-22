@@ -6,8 +6,10 @@ import { requireAccount } from '../lib/guest';
 import { colors, islandColor } from '../theme';
 import { Post } from '../lib/types';
 import Avatar from './Avatar';
+import PostVideo from './PostVideo';
 import { openExternal } from '../lib/openExternal';
 import { whatsappShareUrl } from '../lib/socialLinks';
+import { blockIfObjectionable } from '../lib/contentFilter';
 
 const EDIT_TAGS = ['food', 'music'];
 
@@ -146,6 +148,7 @@ export default function PostCard({ post, myId, onChanged }: {
       Alert.alert('Write something first 🙂');
       return;
     }
+    if (blockIfObjectionable(editBody)) return;
     setEditBusy(true);
     try {
       const { error } = await supabase.from('posts')
@@ -185,6 +188,7 @@ export default function PostCard({ post, myId, onChanged }: {
           preload: 'metadata',
           style: { width: '100%', maxHeight: 320, borderRadius: 12, marginBottom: 10, backgroundColor: '#000' },
         })}
+      {post.video_url && Platform.OS !== 'web' && <PostVideo uri={post.video_url} />}
       <Text style={s.body}>{post.body}</Text>
       <View style={s.actions}>
         <TouchableOpacity onPress={toggleLike}>

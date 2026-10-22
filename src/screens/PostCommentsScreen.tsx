@@ -3,6 +3,8 @@ import { View, Text, FlatList, TextInput, TouchableOpacity, Alert, StyleSheet, K
 import { useFocusEffect, useRoute } from '@react-navigation/native';
 import { supabase } from '../lib/supabase';
 import { requireAccount } from '../lib/guest';
+import { fetchBlockedIds, openReportBlockMenu } from '../lib/moderation';
+import { blockIfObjectionable } from '../lib/contentFilter';
 import { colors, islandColor } from '../theme';
 import ScreenBackdrop from '../components/ScreenBackdrop';
 import Avatar from '../components/Avatar';
@@ -41,13 +43,15 @@ export default function PostCommentsScreen() {
       .eq('post_id', postId)
       .order('created_at', { ascending: true });
     if (error) { console.error('Failed to load comments:', error); return; }
-    setComments(data ?? []);
+    const blocked = await fetchBlockedIds();
+    setComments((data ?? []).filter(c => !blocked.has(c.author_id)));
   }, [postId]);
   useFocusEffect(useCallback(() => { load(); }, [load]));
 
   const submit = async () => {
     if (!body.trim()) return;
     if (await requireAccount('comment')) return;
+    if (blockIfObjectionable(body)) return;
     setBusy(true);
     try {
       const { data: { user } } = await supabase.auth.getUser();
@@ -109,9 +113,16 @@ export default function PostCommentsScreen() {
               </View>
               <Text style={s.body}>{item.body}</Text>
             </View>
-            {item.author_id === myId && (
+            {item.author_id === myId ? (
               <TouchableOpacity onPress={() => confirmDelete(item)}>
                 <Text style={s.delete}>🗑️</Text>
+              </TouchableOpacity>
+            ) : (
+              <TouchableOpacity hitSlop={10} onPress={() => openReportBlockMenu({
+                contentType: 'comment', contentId: item.id, authorId: item.author_id,
+                authorName: item.profiles?.display_name, onBlocked: load,
+              })}>
+                <Text style={s.more}>⋯</Text>
               </TouchableOpacity>
             )}
           </View>
@@ -140,6 +151,7 @@ const s = StyleSheet.create({
   time: { fontSize: 11, color: colors.muted },
   body: { fontSize: 14, lineHeight: 20, color: colors.ink, marginTop: 3 },
   delete: { fontSize: 16, marginLeft: 4 },
+  more: { fontSize: 16, fontWeight: '700', color: '#41615B', marginLeft: 4 },
   empty: { textAlign: 'center', color: colors.muted, marginTop: 40, paddingHorizontal: 40, lineHeight: 20 },
   inputRow: { flexDirection: 'row', gap: 8, alignItems: 'flex-end', padding: 12,
     paddingBottom: Platform.OS === 'web' ? 110 : 12,

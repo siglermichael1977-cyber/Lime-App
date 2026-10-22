@@ -176,7 +176,7 @@ create table public.follows (
 create table public.reports (
   id uuid primary key default gen_random_uuid(),
   reporter_id uuid not null references public.profiles(id) on delete cascade,
-  content_type text not null check (content_type in ('post','comment','profile','event','job')),
+  content_type text not null check (content_type in ('post','comment','profile','event','job','property_listing','poem','music','story')),
   content_id uuid not null,
   reason text not null,
   status text not null default 'open' check (status in ('open','reviewed','actioned')),
