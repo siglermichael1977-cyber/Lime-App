@@ -9,6 +9,7 @@ import Avatar from '../components/Avatar';
 import { pickAndUploadAvatar } from '../lib/avatarUpload';
 import { openExternal } from '../lib/openExternal';
 import { instagramUrl, facebookUrl, tiktokUrl, xUrl, whatsappUrl } from '../lib/socialLinks';
+import { leaveGuest } from '../lib/guest';
 
 export default function ProfileScreen() {
   const [me, setMe] = useState<Profile | null>(null);
@@ -102,7 +103,7 @@ export default function ProfileScreen() {
       if (!user) return;
       setGuest(user.is_anonymous ?? false);
       if (user.is_anonymous) return;
-      const { data } = await supabase.from('profiles').select('*').eq('id', user.id).single();
+      const { data } = await supabase.from('profiles').select('*').eq('id', user.id).maybeSingle();
       if (data) {
         setMe(data);
         setIsCreator(data.is_creator || false);
@@ -139,12 +140,18 @@ export default function ProfileScreen() {
     return (
       <View style={s.wrap}>
         <ScreenBackdrop />
-        <Text style={s.name}>Guest</Text>
-        <Text style={s.username}>Browsing without an account</Text>
+        <Text style={s.guestWave}>👋🏾</Text>
+        <Text style={s.name}>Welcome to de yard</Text>
+        <Text style={s.guestText}>
+          You're browsing as a guest. Make an account to post, comment, follow creators, and build your profile.
+        </Text>
+        <TouchableOpacity style={s.guestPrimary} onPress={() => leaveGuest('signup')}>
+          <Text style={s.guestPrimaryText}>Sign up</Text>
+        </TouchableOpacity>
+        <TouchableOpacity style={s.guestSecondary} onPress={() => leaveGuest('signin')}>
+          <Text style={s.guestSecondaryText}>Sign in</Text>
+        </TouchableOpacity>
         <View style={s.links}>
-          <TouchableOpacity style={s.row} onPress={() => supabase.auth.signOut()}>
-            <Text style={s.rowText}>Create an account or sign in</Text>
-          </TouchableOpacity>
           <TouchableOpacity style={s.row}
             onPress={() => Linking.openURL('https://limeappfinal.netlify.app/privacy')}>
             <Text style={s.rowText}>Privacy policy</Text>
@@ -345,5 +352,12 @@ const s = StyleSheet.create({
   creatorToggleRow: { padding: 16, borderBottomWidth: 1, borderBottomColor: colors.line, flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center' },
   creatorSubtext: { fontSize: 12, color: colors.muted, marginTop: 3 },
   rowText: { fontWeight: '600', color: colors.ink, fontSize: 14 },
+  guestWave: { fontSize: 44 },
+  guestText: { fontSize: 14, color: colors.muted, textAlign: 'center', lineHeight: 20, marginTop: 8,
+    width: '86%', maxWidth: 420 },
+  guestPrimary: { marginTop: 24, width: '86%', maxWidth: 420, backgroundColor: colors.hibiscus, borderRadius: 999, padding: 15 },
+  guestPrimaryText: { color: '#fff', textAlign: 'center', fontWeight: '800', fontSize: 16 },
+  guestSecondary: { marginTop: 12, width: '86%', maxWidth: 420, borderWidth: 1.5, borderColor: colors.sea, borderRadius: 999, padding: 14 },
+  guestSecondaryText: { color: colors.sea, textAlign: 'center', fontWeight: '800', fontSize: 16 },
   copyright: { fontSize: 10.5, color: colors.muted, marginTop: 28, marginBottom: 20, textAlign: 'center' },
 });

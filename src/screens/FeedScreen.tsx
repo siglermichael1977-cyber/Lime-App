@@ -26,7 +26,8 @@ export default function FeedScreen() {
   const load = useCallback(async () => {
     const { data: { user } } = await supabase.auth.getUser();
     if (!user) return;
-    const { data: profile, error: profileError } = await supabase.from('profiles').select('*').eq('id', user.id).single();
+    // Guests have no profile row, so a missing profile is not an error.
+    const { data: profile, error: profileError } = await supabase.from('profiles').select('*').eq('id', user.id).maybeSingle();
     if (profileError) console.error('Failed to load profile:', profileError);
     setMe(profile);
 

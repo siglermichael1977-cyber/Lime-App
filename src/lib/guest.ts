@@ -7,6 +7,20 @@ export async function isGuest(): Promise<boolean> {
   return session?.user.is_anonymous ?? false;
 }
 
+// The mode AuthScreen opens in after a guest leaves; read once on mount.
+let nextAuthMode: 'signin' | 'signup' = 'signup';
+export function takeAuthMode(): 'signin' | 'signup' {
+  const mode = nextAuthMode;
+  nextAuthMode = 'signup';
+  return mode;
+}
+
+// Ends the guest session and lands on AuthScreen in the given mode.
+export function leaveGuest(mode: 'signin' | 'signup') {
+  nextAuthMode = mode;
+  supabase.auth.signOut();
+}
+
 // Shows the create-account prompt and returns true when the user is a guest,
 // so callers can bail out with `if (await requireAccount('post')) return;`.
 // Signing out lands on AuthScreen, which opens in sign-up mode.

@@ -3,11 +3,12 @@ import { View, Text, TextInput, TouchableOpacity, Alert, StyleSheet, KeyboardAvo
 import { supabase } from '../lib/supabase';
 import { colors } from '../theme';
 import CaribbeanBackdrop from '../components/CaribbeanBackdrop';
+import { takeAuthMode } from '../lib/guest';
 
 export default function AuthScreen() {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
-  const [mode, setMode] = useState<'signin' | 'signup'>('signup');
+  const [mode, setMode] = useState<'signin' | 'signup'>(takeAuthMode);
   const [busy, setBusy] = useState(false);
 
   const submit = async () => {

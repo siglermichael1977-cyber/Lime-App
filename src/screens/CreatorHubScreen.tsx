@@ -94,7 +94,7 @@ export default function CreatorHubScreen() {
           .from('creator_profiles')
           .select('follower_count')
           .eq('id', creatorId)
-          .single();
+          .maybeSingle();
 
         await supabase
           .from('creator_profiles')
@@ -110,7 +110,7 @@ export default function CreatorHubScreen() {
           .from('creator_profiles')
           .select('follower_count')
           .eq('id', creatorId)
-          .single();
+          .maybeSingle();
 
         await supabase
           .from('creator_profiles')

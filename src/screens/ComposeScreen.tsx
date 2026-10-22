@@ -133,7 +133,8 @@ export default function ComposeScreen() {
     setBusy(true);
     try {
       const { data: { user } } = await supabase.auth.getUser();
-      const { data: profile } = await supabase.from('profiles').select('*').eq('id', user!.id).single();
+      const { data: profile } = await supabase.from('profiles').select('*').eq('id', user!.id).maybeSingle();
+      if (!profile) throw new Error('You need an account to post.');
 
       let image_url: string | null = null;
       if (imageUri) {
