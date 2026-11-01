@@ -212,8 +212,8 @@ export default function ComposeScreen() {
       <ScreenBackdrop />
       <TextInput ref={bodyInputRef} style={s.input} multiline placeholder="Wah gwaan? Share wid de yard…"
         placeholderTextColor="#8FA6A1" value={body} maxLength={2000} autoFocus
-        onFocus={() => fixElementWithColor(bodyInputRef.current, colors.ink)}
-        onChangeText={(t) => { setBody(t); fixElementWithColor(bodyInputRef.current, colors.ink); }} />
+        onFocus={() => { if (Platform.OS === 'web') fixElementWithColor(bodyInputRef.current, colors.ink); }}
+        onChangeText={(t) => { setBody(t); if (Platform.OS === 'web') fixElementWithColor(bodyInputRef.current, colors.ink); }} />
       {imageUri && <Image source={{ uri: imageUri }} style={s.preview} />}
       {videoUri && Platform.OS === 'web' &&
         React.createElement('video', {

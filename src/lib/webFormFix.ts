@@ -18,8 +18,13 @@ const STYLE_ID = 'lime-input-text-color-fix';
 // focus/input events alone aren't enough — a MutationObserver also fixes
 // every input/textarea the instant it's inserted into the DOM, before any
 // interaction happens at all.
+// HTMLInputElement/HTMLTextAreaElement only exist in browsers. On iOS/Android
+// referencing them throws a ReferenceError, which crashed the native composer
+// (App Review, build 23) — so these helpers are no-ops anywhere but the web.
+const hasDom = typeof HTMLInputElement !== 'undefined' && typeof HTMLTextAreaElement !== 'undefined';
+
 export function fixElement(el: Element | EventTarget | null) {
-  if (!(el instanceof HTMLInputElement || el instanceof HTMLTextAreaElement)) return;
+  if (!hasDom || !(el instanceof HTMLInputElement || el instanceof HTMLTextAreaElement)) return;
   // Per-element color-scheme, not just the html-level rule below — some WebKit
   // versions re-derive a form control's dark-mode theming from ancestor
   // stacking/compositing context rather than purely the root, so belt-and-suspenders.
@@ -37,7 +42,7 @@ export function fixElement(el: Element | EventTarget | null) {
 // (e.g. AuthScreen's white-on-dark inputs) — pass the real color, not a
 // guess, or it'll paint text the wrong color instead of just invisible text.
 export function fixElementWithColor(el: Element | EventTarget | null, hexColor: string) {
-  if (!(el instanceof HTMLInputElement || el instanceof HTMLTextAreaElement)) return;
+  if (!hasDom || !(el instanceof HTMLInputElement || el instanceof HTMLTextAreaElement)) return;
   el.style.setProperty('color-scheme', 'light');
   el.style.setProperty('-webkit-text-fill-color', hexColor, 'important');
   el.style.setProperty('opacity', '1');

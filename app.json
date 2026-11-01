@@ -20,7 +20,7 @@
       "infoPlist": {
         "NSPhotoLibraryUsageDescription": "LIME needs photo access so you can share pictures with the community."
       },
-      "buildNumber": "23"
+      "buildNumber": "24"
     },
     "android": {
       "package": "com.mykkesigler.lime",
@@ -33,7 +33,15 @@
     },
     "plugins": [
       "expo-asset",
-      "expo-video"
+      "expo-video",
+      [
+        "expo-image-picker",
+        {
+          "photosPermission": "LIME needs photo access so you can share pictures with the community.",
+          "cameraPermission": "LIME uses your camera so you can take photos and videos to share with the community.",
+          "microphonePermission": "LIME uses your microphone to record sound when you capture a video to share."
+        }
+      ]
     ],
     "icon": "./assets/icon.png",
     "extra": {
