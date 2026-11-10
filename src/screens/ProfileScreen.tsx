@@ -1,5 +1,5 @@
 import React, { useCallback, useState } from 'react';
-import { View, Text, TextInput, TouchableOpacity, Alert, StyleSheet, Linking, Modal, Platform, Switch } from 'react-native';
+import { View, Text, TextInput, TouchableOpacity, Alert, StyleSheet, Linking, Modal, Platform, Switch, ScrollView } from 'react-native';
 import { useFocusEffect } from '@react-navigation/native';
 import { supabase } from '../lib/supabase';
 import { colors, islandColor, LOOKING_FOR_OPTIONS } from '../theme';
@@ -9,7 +9,7 @@ import Avatar from '../components/Avatar';
 import { pickAndUploadAvatar } from '../lib/avatarUpload';
 import { openExternal } from '../lib/openExternal';
 import { instagramUrl, facebookUrl, tiktokUrl, xUrl, whatsappUrl } from '../lib/socialLinks';
-import { leaveGuest } from '../lib/guest';
+import { leaveGuest, setNextAuthMode } from '../lib/guest';
 
 const CONTACT_URL = 'mailto:mykkesigler@icloud.com';
 
@@ -130,6 +130,8 @@ export default function ProfileScreen() {
               return;
             }
             // The user is gone server-side, so only clear the local session.
+            // With no session the app shows AuthScreen; open it in sign-in mode.
+            setNextAuthMode('signin');
             await supabase.auth.signOut({ scope: 'local' });
           },
         },
@@ -140,8 +142,9 @@ export default function ProfileScreen() {
   // Guests have no profile row; give them a way to sign up or leave.
   if (guest) {
     return (
-      <View style={s.wrap}>
+      <View style={s.root}>
         <ScreenBackdrop />
+        <ScrollView style={s.scroll} contentContainerStyle={s.wrap}>
         <Text style={s.guestWave}>👋🏾</Text>
         <Text style={s.name}>Welcome to de yard</Text>
         <Text style={s.guestText}>
@@ -153,6 +156,13 @@ export default function ProfileScreen() {
         <TouchableOpacity style={s.guestSecondary} onPress={() => leaveGuest('signin')}>
           <Text style={s.guestSecondaryText}>Sign in</Text>
         </TouchableOpacity>
+        <View style={s.accountSection}>
+          <Text style={s.sectionLabel}>Account</Text>
+          <TouchableOpacity style={s.deleteBtn} onPress={deleteAccount}
+            accessibilityRole="button" accessibilityLabel="Delete account">
+            <Text style={s.deleteBtnText}>Delete account</Text>
+          </TouchableOpacity>
+        </View>
         <View style={s.links}>
           <TouchableOpacity style={s.row} onPress={() => Linking.openURL(CONTACT_URL)}>
             <Text style={s.rowText}>Contact us</Text>
@@ -166,15 +176,17 @@ export default function ProfileScreen() {
             <Text style={s.rowText}>Terms of service</Text>
           </TouchableOpacity>
         </View>
+        </ScrollView>
       </View>
     );
   }
 
-  if (!me) return <View style={s.wrap}><ScreenBackdrop /></View>;
+  if (!me) return <View style={s.root}><ScreenBackdrop /></View>;
 
   return (
-    <View style={s.wrap}>
+    <View style={s.root}>
       <ScreenBackdrop />
+      <ScrollView style={s.scroll} contentContainerStyle={s.wrap}>
       <TouchableOpacity onPress={changePhoto} disabled={avatarBusy}>
         <Avatar uri={me.avatar_url} letter={me.display_name[0]} size={84}
           bgColor={islandColor(me.island)} borderWidth={3} borderColor={colors.mango} />
@@ -250,6 +262,14 @@ export default function ProfileScreen() {
         </View>
       </Modal>
 
+      <View style={s.accountSection}>
+        <Text style={s.sectionLabel}>Account</Text>
+        <TouchableOpacity style={s.deleteBtn} onPress={deleteAccount}
+          accessibilityRole="button" accessibilityLabel="Delete account">
+          <Text style={s.deleteBtnText}>Delete account</Text>
+        </TouchableOpacity>
+      </View>
+
       {(me.instagram_url || me.facebook_url || me.tiktok_url || me.x_url || me.whatsapp || me.phone) && (
         <View style={s.links}>
           {me.instagram_url && (
@@ -316,18 +336,24 @@ export default function ProfileScreen() {
           onPress={() => Linking.openURL('https://limeappfinal.netlify.app/terms')}>
           <Text style={s.rowText}>Terms of service</Text>
         </TouchableOpacity>
-        <TouchableOpacity style={s.row} onPress={deleteAccount}>
-          <Text style={[s.rowText, { color: colors.hibiscus }]}>Delete account</Text>
-        </TouchableOpacity>
       </View>
 
       <Text style={s.copyright}>© 2025 LIME — De Whole Caribbean, One Yard. All rights reserved.</Text>
+      </ScrollView>
     </View>
   );
 }
 
 const s = StyleSheet.create({
-  wrap: { flex: 1, backgroundColor: 'transparent', alignItems: 'center', paddingTop: 80 },
+  root: { flex: 1, backgroundColor: 'transparent' },
+  scroll: { flex: 1 },
+  // Bottom padding keeps the last rows clear of the tab bar.
+  wrap: { flexGrow: 1, alignItems: 'center', paddingTop: 80, paddingBottom: 120 },
+  accountSection: { marginTop: 28, width: '86%', maxWidth: 420 },
+  sectionLabel: { fontSize: 12, fontWeight: '800', color: colors.muted, textTransform: 'uppercase',
+    letterSpacing: 0.8, marginBottom: 8, marginLeft: 4 },
+  deleteBtn: { backgroundColor: '#D92D20', borderRadius: 999, padding: 15 },
+  deleteBtnText: { color: '#fff', textAlign: 'center', fontWeight: '800', fontSize: 16 },
   changePhoto: { color: colors.sea, fontWeight: '700', fontSize: 12.5, marginTop: 8 },
   name: { fontSize: 22, fontWeight: '800', color: colors.ink, marginTop: 8 },
   username: { fontSize: 13, color: colors.muted, marginTop: 2 },

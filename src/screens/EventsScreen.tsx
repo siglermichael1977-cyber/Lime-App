@@ -20,10 +20,11 @@ export default function EventsScreen() {
   const load = useCallback(async () => {
     const { data: { user } } = await supabase.auth.getUser();
     if (user) setMyId(user.id);
-    const { data } = await supabase.from('events')
+    const { data, error } = await supabase.from('events')
       .select('*, event_rsvps(user_id)')
       .gte('starts_at', new Date().toISOString())
       .order('starts_at');
+    if (error) console.error('Failed to load linkups:', error);
     const blocked = await fetchBlockedIds();
     setEvents((data ?? []).filter(e => !blocked.has(e.host_id)));
   }, []);

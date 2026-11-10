@@ -15,6 +15,11 @@ export function takeAuthMode(): 'signin' | 'signup' {
   return mode;
 }
 
+// Sets the mode AuthScreen opens in next time it mounts (e.g. sign-in after deleting an account).
+export function setNextAuthMode(mode: 'signin' | 'signup') {
+  nextAuthMode = mode;
+}
+
 // Ends the guest session and lands on AuthScreen in the given mode.
 export function leaveGuest(mode: 'signin' | 'signup') {
   nextAuthMode = mode;
